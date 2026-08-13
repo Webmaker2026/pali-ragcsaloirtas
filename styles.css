@@ -232,7 +232,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow: hidden;
   isolation: isolate;
 }
@@ -260,7 +260,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(0deg, rgba(11,12,14,0.98) 0%, rgba(11,12,14,0.55) 45%, rgba(11,12,14,0.25) 75%, rgba(11,12,14,0.55) 100%);
+    linear-gradient(180deg, rgba(11,12,14,0.95) 0%, rgba(11,12,14,0.55) 42%, rgba(11,12,14,0.22) 72%, rgba(11,12,14,0.5) 100%);
 }
 
 .hero__grain {
@@ -273,8 +273,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
 
 .hero__content {
   position: relative;
-  padding-bottom: clamp(4rem, 10vh, 7rem);
-  padding-top: 8rem;
+  padding-top: clamp(2.5rem, 7vh, 4.5rem);
+  padding-bottom: clamp(2rem, 6vh, 3.5rem);
 }
 
 .hero__title {
