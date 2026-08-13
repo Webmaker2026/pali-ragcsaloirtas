@@ -50,6 +50,41 @@ document.getElementById('year').textContent = new Date().getFullYear();
   items.forEach((el) => observer.observe(el));
 })();
 
+/* --- Minden második szó kiemelése akcentszínnel a fő címsorokban --- */
+(function alternateWordColor() {
+  const targets = document.querySelectorAll('.hero__title, .section-title, .urgent-cta__title, .method__title');
+
+  function processNode(node, state) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const frag = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach((part) => {
+        if (part === '') return;
+        if (/^\s+$/.test(part)) {
+          frag.appendChild(document.createTextNode(part));
+          return;
+        }
+        state.index += 1;
+        if (state.index % 2 === 0) {
+          const span = document.createElement('span');
+          span.className = 'word-accent';
+          span.textContent = part;
+          frag.appendChild(span);
+        } else {
+          frag.appendChild(document.createTextNode(part));
+        }
+      });
+      node.replaceWith(frag);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      Array.from(node.childNodes).forEach((child) => processNode(child, state));
+    }
+  }
+
+  targets.forEach((el) => {
+    const state = { index: 0 };
+    Array.from(el.childNodes).forEach((child) => processNode(child, state));
+  });
+})();
+
 /* --- Sima görgetés horgonyokra (fejléc-magasság figyelembevételével) --- */
 (function anchorScroll() {
   const header = document.querySelector('.site-header');

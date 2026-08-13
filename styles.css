@@ -86,9 +86,11 @@ a { color: inherit; }
   letter-spacing: 0.01em;
   text-transform: uppercase;
   font-size: clamp(1.9rem, 1.5rem + 2vw, 3.25rem);
-  line-height: 1.05;
+  line-height: 1.2;
   margin: 0 0 1.25rem;
 }
+
+.word-accent { color: var(--accent); }
 
 .section-lead {
   color: var(--muted);
@@ -277,7 +279,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
 
 .hero__title {
   font-size: clamp(2.5rem, 1.8rem + 4.5vw, 5.5rem);
-  line-height: 0.98;
+  line-height: 1.12;
   text-transform: uppercase;
   margin: 0 0 1.25rem;
   max-width: 16ch;
@@ -583,7 +585,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
   font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.2rem);
   text-transform: uppercase;
   margin: 0 0 1rem;
-  line-height: 1.1;
+  line-height: 1.22;
 }
 .method__meta { color: var(--muted); }
 
