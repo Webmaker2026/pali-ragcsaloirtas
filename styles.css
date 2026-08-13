@@ -180,13 +180,18 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--ink);
   margin-right: auto;
+}
+
+.logo__img {
+  display: block;
+  height: clamp(40px, 6vw, 52px);
+  width: auto;
+  max-width: 100%;
 }
 
 .main-nav {
