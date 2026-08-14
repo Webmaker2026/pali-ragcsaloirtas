@@ -594,60 +594,55 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 400; }
 }
 .method__meta { color: var(--muted); }
 
-/* =========================================================
-   ÖSSZEHASONLÍTÁS / ÁRAK
-   ========================================================= */
-.compare__table-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+.pricing__table-wrap{overflow-x:auto;margin-top:2.5rem}
+.pricing__table{width:100%;border-collapse:collapse;font-size:.95rem}
+.pricing__table thead th{
+  text-align:left;padding:1rem 1.2rem;
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.55);
+  border-bottom:1px solid rgba(255,255,255,.14)
 }
-.compare__table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 640px;
+.pricing__table tbody tr{border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s}
+.pricing__table tbody tr:hover{background:rgba(255,255,255,.03)}
+.pricing__table th[scope="row"]{
+  text-align:left;padding:1.4rem 1.2rem;font-weight:600;color:var(--ink);min-width:210px
 }
-.compare__table th, .compare__table td {
-  text-align: left;
-  padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--line);
+.pricing__table td{padding:1.4rem 1.2rem;color:rgba(255,255,255,.72);vertical-align:top}
+.pricing__sub{
+  display:block;margin-top:.35rem;font-weight:400;font-size:.8rem;
+  color:rgba(255,255,255,.5);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em
 }
-.compare__table thead th {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  background: var(--bg-2);
-  color: var(--accent);
+.pricing__price{white-space:nowrap;text-align:right}
+.pricing__price strong{
+  display:block;font-size:1.45rem;font-weight:700;color:var(--red);letter-spacing:-.01em
 }
-.compare__table tbody th {
-  color: var(--muted);
-  font-weight: 600;
-  background: var(--bg-2);
+.pricing__unit{
+  display:block;margin-top:.2rem;font-size:.72rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(255,255,255,.45)
 }
-.compare__table tbody tr:last-child td,
-.compare__table tbody tr:last-child th { border-bottom: none; }
+.pricing__row--featured{background:rgba(220,38,38,.06)}
+.pricing__row--featured th[scope="row"]{box-shadow:inset 3px 0 0 var(--red)}
 
-/* =========================================================
-   MIÉRT MINKET
-   ========================================================= */
-.why__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+.pricing__notes{
+  list-style:none;padding:0;margin:1.8rem 0 0;
+  font-size:.85rem;color:rgba(255,255,255,.5)
 }
-.why-card {
-  background: linear-gradient(160deg, var(--bg-2), var(--bg));
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.75rem;
+.pricing__notes li{padding-left:1.1rem;position:relative;margin-bottom:.45rem}
+.pricing__notes li::before{content:"—";position:absolute;left:0;color:var(--red)}
+
+.pricing__cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem}
+
+@media (max-width:760px){
+  .pricing__table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .pricing__table,.pricing__table tbody,.pricing__table tr,
+  .pricing__table th,.pricing__table td{display:block;width:100%}
+  .pricing__table tbody tr{
+    border:1px solid rgba(255,255,255,.12);border-radius:10px;
+    padding:1.1rem;margin-bottom:1rem;background:rgba(255,255,255,.02)
+  }
+  .pricing__table th[scope="row"],.pricing__table td{padding:.45rem 0}
+  .pricing__price{text-align:left;border-top:1px solid rgba(255,255,255,.1);margin-top:.6rem;padding-top:.9rem}
 }
-.why-card h3 {
-  margin: 0 0 0.5rem;
-  color: var(--accent);
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-.why-card p { margin: 0; color: var(--muted); }
 
 /* =========================================================
    GALÉRIA
