@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Consent Mode v2 — alapértelmezett, elutasított állapot.
+     Jelenleg nincs betöltve GA4/GTM/Google Ads címke; ez a dataLayer-stub
+     csak előkészíti a talajt, hogy amikor majd bekerül egy ilyen szolgáltatás,
+     a helyes (hozzájáruláshoz kötött) kiinduló állapotot találja. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    wait_for_update: 500
+  });
+</script>
 <title>Adatkezelési tájékoztató | A-Leco Management Kft.</title>
 <meta name="description" content="Az A-Leco Management Kft. adatkezelési tájékoztatója az ajánlatkérő űrlapon keresztül megadott személyes adatok kezeléséről.">
 <link rel="canonical" href="https://www.patkanyirtasbudapest.hu/adatkezeles.html">
@@ -23,6 +38,10 @@
     szerepelt a projektben, szükség esetén pótolandó.
   Ez a tájékoztató a weboldalon ténylegesen elérhető adatkezelést (ajánlatkérő
   űrlap) írja le, kitalált vagy placeholder adatot nem tartalmaz.
+  - Sütikezelés: a weboldal cookie consent bannerrel és a cookie-tajekoztato.html
+    oldallal rendelkezik. GA4/GTM/Google Ads azonosító jelenleg NINCS beállítva —
+    ha ezek bevezetésre kerülnek, a "Süti (cookie) és mérési technológiák" szakaszt
+    és a cookie-tajekoztato.html oldalt is frissíteni kell a tényleges adatokkal.
 -->
 </head>
 <body>
@@ -73,8 +92,10 @@
       <h2>Az Ön jogai</h2>
       <p>Önt megilleti a hozzáféréshez, a helyesbítéshez, a törléshez, az adatkezelés korlátozásához, az adathordozhatósághoz, valamint a tiltakozáshoz való jog. Kérelmét a fenti elérhetőségeken nyújthatja be. Ha megítélése szerint adatkezelésünk nem felel meg a jogszabályi előírásoknak, panasszal fordulhat a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH).</p>
 
-      <h2>Süti (cookie) használat</h2>
-      <p>A weboldal a működéséhez jelenleg nem használ nyomkövető vagy marketing célú sütiket. Amennyiben a jövőben ilyen technológia bevezetésre kerül, jelen tájékoztatót ennek megfelelően frissítjük.</p>
+      <h2>Süti (cookie) és mérési technológiák</h2>
+      <p>A weboldal a hozzájárulás-kezeléshez szükséges tároláson (a Cookie beállításokban tett választás megjegyzése) és a betűtípusok megjelenítéséhez használt Google Fonts szolgáltatáson kívül jelenleg nem használ statisztikai vagy marketing célú sütit, mérőkódot, illetve konverziókövetést (pl. Google Analytics/GA4, Google Tag Manager, Google Ads). A ténylegesen használt sütikről, azok céljáról, szolgáltatójáról és megőrzési idejéről a <a href="cookie-tajekoztato.html">Cookie tájékoztató</a> nyújt részletes tájékoztatást.</p>
+      <p>Amennyiben a jövőben statisztikai vagy marketing célú technológia (pl. GA4, Google Ads konverziómérés, Google Tag Manager) bevezetésre kerül, az kizárólag a látogató előzetes, önkéntes hozzájárulása esetén, a Cookie beállításokban megadott engedély alapján aktiválódik majd, és jelen tájékoztatót, valamint a Cookie tájékoztatót előtte frissítjük a pontos adatokkal.</p>
+      <p>A hozzájárulása a weboldal láblécében található <strong>Cookie beállítások</strong> gombbal bármikor módosítható vagy visszavonható.</p>
 
       <h2>Kapcsolat</h2>
       <p>Az adatkezeléssel kapcsolatos kérdéseivel, kéréseivel forduljon hozzánk bizalommal a <a href="mailto:aleco.manag@gmail.com">aleco.manag@gmail.com</a> e-mail címen, vagy telefonon a <a href="tel:+36203483026">+36 20 348 3026</a> számon.</p>
@@ -84,11 +105,83 @@
 
 <footer class="site-footer">
   <div class="container site-footer__bottom">
-    <p><a href="index.html">&larr; Vissza a főoldalra</a></p>
+    <p>
+      <a href="index.html">&larr; Vissza a főoldalra</a>
+      · <a href="cookie-tajekoztato.html">Cookie tájékoztató</a>
+      · <button type="button" class="footer-link-btn" data-cookie-open-settings>Cookie beállítások</button>
+    </p>
     <p>&copy; <span id="year"></span> A-Leco Management Kft. Minden jog fenntartva.</p>
   </div>
 </footer>
 
+<!-- ===== COOKIE HOZZÁJÁRULÁS ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerText" hidden>
+  <div class="cookie-banner__text">
+    <p class="cookie-banner__title" id="cookieBannerTitle">Sütiket használunk</p>
+    <p id="cookieBannerText">A weboldal működéséhez szükséges sütiket mindig használjuk. Statisztikai és marketing célú sütiket csak az Ön hozzájárulásával alkalmazunk. Bővebben a <a href="cookie-tajekoztato.html">Cookie tájékoztatóban</a>.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button type="button" class="btn btn--outline" id="cookieRejectAll">Elutasítom</button>
+    <button type="button" class="btn btn--ghost" id="cookieOpenSettings">Beállítások</button>
+    <button type="button" class="btn btn--accent" id="cookieAcceptAll">Elfogadom</button>
+  </div>
+</div>
+
+<div class="cookie-modal" id="cookieModal" hidden>
+  <div class="cookie-modal__backdrop" data-cookie-close></div>
+  <div class="cookie-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" tabindex="-1">
+    <button type="button" class="cookie-modal__close" id="cookieModalClose" aria-label="Bezárás">&times;</button>
+    <h2 id="cookieModalTitle">Cookie beállítások</h2>
+    <p class="cookie-modal__lead">Válassza ki, mely süticsoportokat engedélyezi. A szükséges sütik mindig aktívak. Részletek: <a href="cookie-tajekoztato.html">Cookie tájékoztató</a>.</p>
+
+    <div class="cookie-category">
+      <div class="cookie-category__head">
+        <label class="switch">
+          <input type="checkbox" checked disabled aria-label="Szükséges sütik, mindig aktív">
+          <span class="switch__track"></span>
+        </label>
+        <div>
+          <p class="cookie-category__title">Szükséges</p>
+          <p class="cookie-category__desc">A weboldal alapműködéséhez és a süti-hozzájárulás megjegyzéséhez elengedhetetlenek. Ezek nélkül a weboldal nem működik megfelelően. Mindig aktívak.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cookie-category">
+      <div class="cookie-category__head">
+        <label class="switch">
+          <input type="checkbox" id="cookieToggleStatistics" aria-label="Statisztikai sütik engedélyezése">
+          <span class="switch__track"></span>
+        </label>
+        <div>
+          <p class="cookie-category__title">Statisztikai</p>
+          <p class="cookie-category__desc">A weboldal használatának mérésére szolgálnának (pl. látogatottsági statisztika). Jelenleg nincs aktív statisztikai mérőkód a weboldalon — a kapcsoló a jövőbeli, hozzájáruláshoz kötött bevezetéshez készült elő.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cookie-category">
+      <div class="cookie-category__head">
+        <label class="switch">
+          <input type="checkbox" id="cookieToggleMarketing" aria-label="Marketing sütik engedélyezése">
+          <span class="switch__track"></span>
+        </label>
+        <div>
+          <p class="cookie-category__title">Marketing</p>
+          <p class="cookie-category__desc">Hirdetési célú méréshez (pl. Google Ads konverziókövetés) használhatók. Jelenleg nincs aktív marketing célú süti a weboldalon — a kapcsoló a jövőbeli, hozzájáruláshoz kötött bevezetéshez készült elő.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cookie-modal__actions">
+      <button type="button" class="btn btn--outline" id="cookieModalRejectAll">Összes elutasítása</button>
+      <button type="button" class="btn btn--ghost" id="cookieModalSave">Kiválasztottak mentése</button>
+      <button type="button" class="btn btn--accent" id="cookieModalAcceptAll">Összes elfogadása</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/cookie-consent.js" defer></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
