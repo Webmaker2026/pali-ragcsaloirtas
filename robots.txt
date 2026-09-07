@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /send-form.php
+Disallow: /koszonjuk.html
+
+Sitemap: https://www.patkanyirtasbudapest.hu/sitemap.xml
