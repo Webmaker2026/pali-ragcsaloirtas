@@ -214,7 +214,11 @@ p:last-child { margin-bottom: 0; }
 }
 
 .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
-.logo__img { height: 46px; width: auto; }
+.logo__img {
+  height: 90px;
+  width: auto;
+  max-width: none;
+}
 
 .main-nav {
   display: none;

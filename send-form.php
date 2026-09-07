@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 mb_internal_encoding('UTF-8');
 
-const RECIPIENT_EMAIL = 'aleco.manag@gmail.com';
+const RECIPIENT_EMAIL = 'sevenautoszer@gmail.com';
 const SITE_NAME       = 'A-Leco Management Kft. — patkanyirtasbudapest.hu';
 // A From fejléc a saját domainre mutat, hogy a legtöbb levelezőszerver elfogadja.
 // Élesítés után érdemes SPF/DKIM rekordot beállítani ehhez a domainhez.
