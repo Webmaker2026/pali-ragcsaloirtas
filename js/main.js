@@ -1,6 +1,7 @@
 /* ============================================================
-   {{CEGNEV}} — landing oldal viselkedése
-   Vanilla JS: mobilmenü, reveal-animáció, GYIK, űrlap validáció.
+   A-Leco Management Kft. — patkanyirtasbudapest.hu
+   Vanilla JS: mobilmenü, reveal-animáció, sima görgetés,
+   ajánlatkérő űrlap validáció és beküldés.
    ============================================================ */
 
 document.getElementById('year').textContent = new Date().getFullYear();
@@ -36,9 +37,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const delay = (Array.from(entry.target.parentElement.children).indexOf(entry.target) % 6) * 90;
+          const delay = (Array.from(entry.target.parentElement.children).indexOf(entry.target) % 6) * 80;
           setTimeout(() => entry.target.classList.add('is-visible'), delay);
           observer.unobserve(entry.target);
         }
@@ -48,41 +49,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
   );
 
   items.forEach((el) => observer.observe(el));
-})();
-
-/* --- Minden második szó kiemelése akcentszínnel a fő címsorokban --- */
-(function alternateWordColor() {
-  const targets = document.querySelectorAll('.hero__title, .section-title, .urgent-cta__title, .method__title');
-
-  function processNode(node, state) {
-    if (node.nodeType === Node.TEXT_NODE) {
-      const frag = document.createDocumentFragment();
-      node.textContent.split(/(\s+)/).forEach((part) => {
-        if (part === '') return;
-        if (/^\s+$/.test(part)) {
-          frag.appendChild(document.createTextNode(part));
-          return;
-        }
-        state.index += 1;
-        if (state.index % 2 === 0) {
-          const span = document.createElement('span');
-          span.className = 'word-accent';
-          span.textContent = part;
-          frag.appendChild(span);
-        } else {
-          frag.appendChild(document.createTextNode(part));
-        }
-      });
-      node.replaceWith(frag);
-    } else if (node.nodeType === Node.ELEMENT_NODE) {
-      Array.from(node.childNodes).forEach((child) => processNode(child, state));
-    }
-  }
-
-  targets.forEach((el) => {
-    const state = { index: 0 };
-    Array.from(el.childNodes).forEach((child) => processNode(child, state));
-  });
 })();
 
 /* --- Sima görgetés horgonyokra (fejléc-magasság figyelembevételével) --- */
@@ -98,15 +64,18 @@ document.getElementById('year').textContent = new Date().getFullYear();
       const offset = (header ? header.offsetHeight : 0) + 12;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
+      history.pushState(null, '', id);
     });
   });
 })();
 
-/* --- Ajánlatkérő űrlap validáció --- */
-(function quoteFormValidation() {
+/* --- Ajánlatkérő űrlap: validáció + beküldés --- */
+(function quoteForm() {
   const form = document.querySelector('.quote-form');
   if (!form) return;
   const status = document.getElementById('formStatus');
+  const loadedAt = document.getElementById('f-loaded-at');
+  if (loadedAt) loadedAt.value = String(Date.now());
 
   const messages = {
     valueMissing: 'Ez a mező kötelező.',
@@ -151,11 +120,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    status.removeAttribute('data-state');
     status.textContent = '';
-
-    // Honeypot: ha ki van töltve, elnémítjuk a beküldést (bot).
-    const honeypot = form.querySelector('[name="website"]');
-    if (honeypot && honeypot.value) return;
 
     const requiredFields = form.querySelectorAll('[required]');
     let firstInvalid = null;
@@ -171,11 +137,41 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
     if (!allValid) {
       status.textContent = 'Kérjük, javítsa a pirossal jelölt mezőket.';
+      status.setAttribute('data-state', 'error');
       if (firstInvalid) firstInvalid.focus();
       return;
     }
 
-    status.textContent = 'Köszönjük! Hamarosan felvesszük Önnel a kapcsolatot.';
-    form.reset();
+    const submitBtn = form.querySelector('#form-submit');
+    if (submitBtn) submitBtn.disabled = true;
+    status.textContent = 'Küldés folyamatban…';
+
+    fetch(form.getAttribute('action'), {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    })
+      .then((res) => {
+        if (res.redirected) {
+          window.location.href = res.url;
+          return null;
+        }
+        return res.json().catch(() => ({ ok: res.ok }));
+      })
+      .then((data) => {
+        if (data === null) return;
+        if (data && data.ok) {
+          window.location.href = 'koszonjuk.html';
+          return;
+        }
+        status.textContent = (data && data.message) || 'Hiba történt a küldés során. Kérjük, próbálja újra, vagy hívjon minket telefonon.';
+        status.setAttribute('data-state', 'error');
+        if (submitBtn) submitBtn.disabled = false;
+      })
+      .catch(() => {
+        status.textContent = 'Hiba történt a küldés során. Kérjük, próbálja újra, vagy hívjon minket telefonon.';
+        status.setAttribute('data-state', 'error');
+        if (submitBtn) submitBtn.disabled = false;
+      });
   });
 })();
