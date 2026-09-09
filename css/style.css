@@ -48,6 +48,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -67,6 +68,7 @@ body {
   font-size: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -302,6 +304,15 @@ p:last-child { margin-bottom: 0; }
 
 @media (min-width: 640px) {
   .header-actions .btn--header span:last-child { display: inline; }
+}
+
+/* Nagyon keskeny mobil nézetben (<480px) a fix magasságú, arányában
+   nem zsugorodó logó (flex-shrink:0 + max-width:none) a fejléc
+   szélességét a viewport fölé tolta — ez okozott vízszintes overflow-t. */
+@media (max-width: 479px) {
+  .logo__img {
+    height: 60px;
+  }
 }
 
 /* ===== HERO ===== */
@@ -1178,8 +1189,14 @@ p:last-child { margin-bottom: 0; }
 @media (min-width: 720px) {
   .site-footer__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+/* A kétoszlopos elrendezés 480px alatt annyira összeszűkült, hogy a
+   hosszabb tartalom (pl. e-mail cím) kilógott az oszlopból és a
+   viewportból is — keskeny mobilon inkább egy oszlopba rendezzük. */
+@media (max-width: 479px) {
+  .site-footer__grid { grid-template-columns: 1fr; gap: 1.75rem; }
+}
 .site-footer h3 { color: #fff; font-size: 0.95rem; margin: 0 0 0.9rem; }
-.site-footer p { margin: 0 0 0.5rem; font-size: 0.9rem; }
+.site-footer p { margin: 0 0 0.5rem; font-size: 0.9rem; overflow-wrap: anywhere; }
 .site-footer a:hover { color: #fff; }
 .logo--footer {
   font-family: var(--font-display);
