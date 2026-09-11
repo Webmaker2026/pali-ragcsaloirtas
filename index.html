@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Google Consent Mode v2 — alapértelmezett, elutasított állapot.
      Jelenleg nincs betöltve GA4/GTM/Google Ads címke; ez a dataLayer-stub
      csak előkészíti a talajt, hogy amikor majd bekerül egy ilyen szolgáltatás,
@@ -36,9 +36,9 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&amp;display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/design-integration.css?v=20260911">
 
 <script type="application/ld+json">
 {
@@ -114,678 +114,627 @@
   ]
 }
 </script>
+<noscript><style>.rv { opacity:1; transform:none; }</style></noscript>
 </head>
 <body>
-
-<a class="skip-link" href="#main">Ugrás a tartalomra</a>
-
-<!-- ===== FEJLÉC ===== -->
-<header class="site-header" id="top">
-  <div class="container site-header__inner">
-    <a href="#top" class="logo">
-      <img src="images/ragcsalo-logo.webp" alt="A-Leco Management Kft." width="1774" height="887" class="logo__img">
-    </a>
-
-    <nav class="main-nav" id="main-nav" aria-label="Fő navigáció">
-      <a href="#patkanyirtas">Patkányirtás</a>
-      <a href="#egerirtas">Egérirtás</a>
-      <a href="#arak">Árak</a>
-      <a href="#sos">SOS</a>
-      <a href="#tarsashaz">Társasház</a>
-      <a href="#gyik">GYIK</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="btn btn--accent btn--header" id="nav-call" data-conversion-action="phone" href="tel:+36203483026" aria-label="Telefonhívás indítása: +36 20 348 3026">
-        <svg class="btn__icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
-        <span>Hívás</span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü megnyitása">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
+<div class="design-page" style="font-family:var(--font-body);color:var(--color-text);background:#faf7f2;font-size:16px;line-height:1.6;">
+<a class="interaction-1" href="#main" style="position:absolute;left:-9999px;top:0;background:var(--color-accent);color:#fdf9f3;padding:12px 20px;font-weight:800;z-index:999;">Ugrás a tartalomra</a>
+<header class="site-header" id="top" style="position:sticky;top:0;z-index:500;background:rgba(245,236,224,.94);backdrop-filter:blur(8px);border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,40px);display:flex;align-items:center;gap:24px;min-height:74px;">
+<a href="#top" style="display:inline-flex;align-items:center;flex-shrink:0;">
+<img alt="A-Leco Management Kft." height="887" src="images/ragcsalo-logo.webp" style="height:52px;width:auto;max-width:none;" width="1774"/>
+</a>
+<nav aria-label="Fő navigáció" class="nav-desk" style="display:flex;align-items:center;gap:26px;margin-left:auto;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;">
+<a class="interaction-2" href="#patkanyirtas" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">Patkányirtás</a>
+<a class="interaction-2" href="#egerirtas" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">Egérirtás</a>
+<a class="interaction-2" href="#arak" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">Árak</a>
+<a class="interaction-2" href="#sos" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">SOS</a>
+<a class="interaction-2" href="#tarsashaz" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">Társasház</a>
+<a class="interaction-2" href="#gyik" style="color:var(--color-text);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;">GYIK</a>
+</nav>
+<div style="display:flex;align-items:center;gap:10px;margin-left:auto;">
+<a aria-label="Telefonhívás indítása: +36 20 348 3026" class="interaction-3" data-conversion-action="phone" href="tel:+36203483026" id="nav-call" style="display:inline-flex;align-items:center;gap:8px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:11px 16px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="15" viewbox="0 0 24 24" width="15"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+<span>Hívás</span>
+</a>
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Menü megnyitása" class="burger" id="menuToggle" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;padding:0;border:2px solid var(--color-text);background:transparent;cursor:pointer;" type="button">
+<span style="display:block;width:20px;height:2px;margin:0 auto;background:var(--color-text);"></span>
+<span style="display:block;width:20px;height:2px;margin:0 auto;background:var(--color-text);"></span>
+<span style="display:block;width:20px;height:2px;margin:0 auto;background:var(--color-text);"></span>
+</button>
+</div>
+</div>
+<nav aria-label="Mobil navigáció" id="main-nav" style="display:none;border-top:2px solid var(--color-divider);background:#faf7f2;">
+<a href="#patkanyirtas" style="display:block;padding:16px clamp(18px,4vw,40px);border-bottom:1px solid var(--color-divider);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">Patkányirtás</a>
+<a href="#egerirtas" style="display:block;padding:16px clamp(18px,4vw,40px);border-bottom:1px solid var(--color-divider);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">Egérirtás</a>
+<a href="#arak" style="display:block;padding:16px clamp(18px,4vw,40px);border-bottom:1px solid var(--color-divider);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">Árak</a>
+<a href="#sos" style="display:block;padding:16px clamp(18px,4vw,40px);border-bottom:1px solid var(--color-divider);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">SOS</a>
+<a href="#tarsashaz" style="display:block;padding:16px clamp(18px,4vw,40px);border-bottom:1px solid var(--color-divider);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">Társasház</a>
+<a href="#gyik" style="display:block;padding:16px clamp(18px,4vw,40px);color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;">GYIK</a>
+</nav>
 </header>
-
 <main id="main">
-
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__media" aria-hidden="true">
-      <img src="images/hero-001.webp" alt="" fetchpriority="high" width="1920" height="1280" class="hero__img">
-      <div class="hero__overlay"></div>
-    </div>
-
-    <div class="container hero__content">
-      <h1 class="hero__title">Patkányirtás Budapesten és Pest megyében</h1>
-      <p class="hero__subtitle">Irtószeres, kutyás vagy görényes módszer — a helyszíni felmérés alapján javasoljuk azt, ami az Ön ingatlanához illik. Egérirtást is vállalunk, lakóingatlanban és üzleti helyszínen egyaránt.</p>
-      <p class="hero__subtitle-mobile">Több irtási megoldás közül választunk, mindig a helyszínhez igazítva — Budapesten és Pest megyében. Egérirtást is vállalunk.</p>
-
-      <div class="hero__cta">
-        <a class="btn btn--accent btn--lg" id="hero-call" data-conversion-action="phone" href="tel:+36203483026" aria-label="Telefonhívás indítása: +36 20 348 3026">Hívom most</a>
-        <a class="btn btn--outline-light btn--lg" id="hero-quote" data-conversion-action="quote" href="#ajanlat">Ajánlatot kérek</a>
-      </div>
-
-      <ul class="hero__facts">
-        <li class="hero__fact--core">Budapest és Pest megye</li>
-        <li class="hero__fact--extra">Lakossági és üzleti megbízások</li>
-        <li class="hero__fact--core">SOS kiszállás igény esetén</li>
-        <li class="hero__fact--extra">Számlaképes szolgáltatás</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== BIZALMI SÁV ===== -->
-  <section class="trust-bar" aria-label="Szolgáltatás jellemzői">
-    <div class="container trust-bar__grid">
-      <div class="trust-item reveal">
-        <span class="trust-item__title">Patkány- és egérirtás</span>
-        <span class="trust-item__label">egy kézből, lakóingatlanban és üzleti helyszínen</span>
-      </div>
-      <div class="trust-item reveal">
-        <span class="trust-item__title">3 módszer</span>
-        <span class="trust-item__label">irtószeres védekezés, kutyás/görényes módszer és csapdázás — a helyszín és a fertőzöttség szerint választva</span>
-      </div>
-      <div class="trust-item reveal">
-        <span class="trust-item__title">Budapest + Pest megye</span>
-        <span class="trust-item__label">a kiszolgált terület egységesen</span>
-      </div>
-      <div class="trust-item reveal">
-        <span class="trust-item__title">SOS kiszállás</span>
-        <span class="trust-item__label">sürgős esetben is hívható, felár ellenében</span>
-      </div>
-    </div>
-
-    <div class="container trust-panel">
-      <div class="trust-panel__card">
-        <p class="trust-panel__title">Patkány- és egérirtás</p>
-        <p class="trust-panel__lead">Egy kézből, lakóingatlanban és üzleti helyszínen — Budapest és Pest megye teljes területén.</p>
-
-        <div class="trust-panel__method">
-          <strong>3 módszer</strong>
-          <span>irtószeres védekezés, kutyás/görényes módszer és csapdázás — a helyszín és a fertőzöttség szerint választva</span>
-        </div>
-
-        <div class="trust-panel__badges">
-          <span class="trust-panel__badge">Lakossági és üzleti megbízások</span>
-          <span class="trust-panel__badge">Számlaképes szolgáltatás</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SÜRGETŐ CTA BLOKK ===== -->
-  <section class="urgent-cta">
-    <div class="container urgent-cta__inner reveal">
-      <h2 class="urgent-cta__title">Minden nappal tovább szaporodnak</h2>
-      <p class="urgent-cta__text">Egy pár patkány néhány hónap alatt akár több tucat egyedre szaporodhat, és a kár is nő a vezetékekben, a szigetelésben, a raktározott árukban. Minél előbb lép, jellemzően annál egyszerűbb és olcsóbb a megoldás.</p>
-      <div class="urgent-cta__actions">
-        <a class="btn btn--primary btn--lg" href="tel:+36203483026">Hívom most: +36 20 348 3026</a>
-        <a class="btn btn--outline btn--lg" href="#ajanlat">Ajánlatot kérek</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== JELEK ===== -->
-  <section class="section section--paper" id="jelek">
-    <div class="container">
-      <p class="kicker reveal">01 — FELISMERÉS</p>
-      <h2 class="section-title reveal">Honnan tudja, hogy patkánya van?</h2>
-      <p class="section-lead reveal">A legtöbb esetben nem magát az állatot látjuk meg elsőként, hanem a nyomait. Ha az alábbiak közül bármelyikre ráismer a lakása, kertje vagy telephelye körül, érdemes mielőbb szakembert hívni.</p>
-
-      <div class="signs__layout">
-        <div class="signs__grid">
-          <article class="sign-card reveal">
-            <span class="sign-card__num">01</span>
-            <h3>Rágásnyomok</h3>
-            <p>Kábeleken, csővezetékeken, ajtókereteken és élelmiszeres dobozokon megjelenő friss, viszonylag nagy méretű rágásnyomok.</p>
-          </article>
-          <article class="sign-card reveal">
-            <span class="sign-card__num">02</span>
-            <h3>Ürülék</h3>
-            <p>Orsó alakú, ujjbegynyi ürülékszemcsék pince, csatornaakna, udvar vagy raktár mentén.</p>
-          </article>
-          <article class="sign-card reveal">
-            <span class="sign-card__num">03</span>
-            <h3>Éjszakai neszek</h3>
-            <p>Kaparás, futkosás a falban, a padló alatt vagy a csatornarendszer felől, jellemzően este és éjszaka.</p>
-          </article>
-          <article class="sign-card reveal">
-            <span class="sign-card__num">04</span>
-            <h3>Járatok és üregek</h3>
-            <p>Frissen ásott, ökölnyi bejáratú üregek épület mellett, kertben vagy komposztáló környékén.</p>
-          </article>
-        </div>
-        <div class="signs__media reveal">
-          <figure>
-            <img src="images/patkany-jarat.webp" alt="Patkányjárat és üreg bejárata épület mellett" loading="lazy" width="800" height="1000">
-            <figcaption>Aktív patkányjárat</figcaption>
-          </figure>
-          <figure>
-            <img src="images/patkany-urulek.webp" alt="Patkányürülék nyomai, amelyek jelenlétre utalnak" loading="lazy" width="800" height="1000">
-            <figcaption>Ürülék nyoma</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PATKÁNYIRTÁS FŐ SZEKCIÓ ===== -->
-  <section class="section section--sage" id="patkanyirtas">
-    <div class="container">
-      <p class="kicker reveal">02 — PATKÁNYIRTÁS</p>
-      <h2 class="section-title reveal">Patkányirtás Budapesten és Pest megyében</h2>
-
-      <div class="feature">
-        <div class="feature__media reveal">
-          <img src="images/patkany.webp" alt="Patkányirtás ipari és kültéri környezetben" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="feature__body reveal">
-          <p>A patkány nagyobb testű és óvatosabb, mint az egér, épületszerkezetben és vezetékekben komoly kárt tud okozni, és jelenléte higiéniai kockázattal is jár. Csatornahálózat, udvar, kert, ipari telephely, komposztáló és hulladéktároló környékén a leggyakoribb a fertőzöttség.</p>
-
-          <div class="feature__meta">
-            <strong>Hogyan zajlik a felmérés:</strong> a helyszínen azonosítjuk a járatokat, a bejutási pontokat és a fertőzöttség mértékét, majd ez alapján javasoljuk a megfelelő megoldást — irtószeres etetőláda-hálózatot, csapdázást, vagy megfelelő helyszíni adottságok esetén kutyás/görényes módszert.
-          </div>
-
-          <ul class="feature__list">
-            <li>Zárt, jelölt biztonsági etetőállomások — gyermekek és háziállatok nem férnek hozzájuk</li>
-            <li>Az etetőládák száma és elhelyezése a terület méretétől és a fertőzöttségtől függ</li>
-            <li>Az árat és a garancia feltételeit a helyszíni adottságok befolyásolják</li>
-          </ul>
-
-          <div class="method-note">
-            <img src="images/etetolada.webp" alt="Zárt, jelölt biztonsági etetőláda irtószeres patkányirtáshoz" loading="lazy" width="90" height="90" style="width:64px;height:64px;object-fit:cover;border-radius:8px;flex-shrink:0;">
-            <p>Így néz ki a zárt, jelölt biztonsági etetőláda, amelybe az irtószer kerül — gyermekek és háziállatok nem férnek hozzá.</p>
-          </div>
-
-          <div class="feature__price">
-            <strong>39 000 Ft-tól</strong>
-            <span>3 db irtószeres etetőláda kihelyezésével és feltöltésével</span>
-          </div>
-
-          <div class="feature-cta">
-            <a class="btn btn--accent" id="pest-call" data-conversion-action="phone" href="tel:+36203483026">
-              <svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+<section id="hero" style="background:#3a2c22;color:#f7eddd;">
+<div class="hero-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.12fr .88fr;align-items:stretch;">
+<div style="padding:clamp(36px,6vw,84px) clamp(18px,4vw,40px) clamp(32px,5vw,72px);display:flex;flex-direction:column;justify-content:center;">
+<p style="margin:0 0 20px;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);">A-Leco Management Kft. — Budapest / Pest megye</p>
+<h1 style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:clamp(32px,4.6vw,62px);line-height:1.02;letter-spacing:-0.025em;margin:0 0 24px;max-width:15ch;">Patkányirtás Budapesten és Pest megyében</h1>
+<div style="width:72px;height:4px;background:var(--color-accent);margin:0 0 24px;"></div>
+<p class="d-only" style="color:#d9d0c4;font-size:17px;line-height:1.6;max-width:52ch;margin:0 0 28px;">Irtószeres, kutyás vagy görényes módszer — a helyszíni felmérés alapján javasoljuk azt, ami az Ön ingatlanához illik. Egérirtást is vállalunk, lakóingatlanban és üzleti helyszínen egyaránt.</p>
+<p class="m-only" style="color:#d9d0c4;font-size:15px;line-height:1.55;max-width:40ch;margin:0 0 22px;">Több irtási megoldás közül választunk, mindig a helyszínhez igazítva — Budapesten és Pest megyében. Egérirtást is vállalunk.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;">
+<a aria-label="Telefonhívás indítása: +36 20 348 3026" class="interaction-4" data-conversion-action="phone" href="tel:+36203483026" id="hero-call" style="display:inline-flex;align-items:center;gap:10px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:16px 26px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+            Hívom most
+          </a>
+<a class="interaction-5" data-conversion-action="quote" href="#ajanlat" id="hero-quote" style="display:inline-flex;align-items:center;background:transparent;color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;letter-spacing:.03em;text-transform:uppercase;padding:16px 26px;border:2px solid rgba(245,236,224,.45);">Ajánlatot kérek</a>
+</div>
+<ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px 28px;padding:24px 0 0;margin:0;list-style:none;border-top:1px solid rgba(245,236,224,.22);">
+<li style="display:flex;align-items:flex-start;gap:10px;color:#e6e3e2;font-size:13.5px;font-weight:600;line-height:1.4;"><span style="flex-shrink:0;width:8px;height:8px;margin-top:6px;background:var(--color-accent);"></span>Budapest és Pest megye</li>
+<li style="display:flex;align-items:flex-start;gap:10px;color:#e6e3e2;font-size:13.5px;font-weight:600;line-height:1.4;"><span style="flex-shrink:0;width:8px;height:8px;margin-top:6px;background:var(--color-accent);"></span>Lakossági és üzleti megbízások</li>
+<li style="display:flex;align-items:flex-start;gap:10px;color:#e6e3e2;font-size:13.5px;font-weight:600;line-height:1.4;"><span style="flex-shrink:0;width:8px;height:8px;margin-top:6px;background:var(--color-accent);"></span>SOS kiszállás igény esetén</li>
+<li style="display:flex;align-items:flex-start;gap:10px;color:#e6e3e2;font-size:13.5px;font-weight:600;line-height:1.4;"><span style="flex-shrink:0;width:8px;height:8px;margin-top:6px;background:var(--color-accent);"></span>Számlaképes szolgáltatás</li>
+</ul>
+</div>
+<div class="hero-media grayscale" style="position:relative;min-height:380px;border-left:2px solid rgba(247,237,221,.3);overflow:hidden;">
+<img alt="" fetchpriority="high" height="1280" src="images/hero-001.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;" width="1920"/>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(58,44,34,.72) 0%,rgba(58,44,34,.16) 44%,rgba(120,70,30,.04) 100%);"></div>
+</div>
+</div>
+</section>
+<section aria-label="Szolgáltatás jellemzői" style="background:#f3e9d9;border-bottom:2px solid var(--color-divider);">
+<div class="trust-row" style="max-width:1280px;margin:0 auto;padding:clamp(28px,4vw,44px) clamp(18px,4vw,40px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;">
+<div class="rv" style="padding-right:20px;">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.01em;">Patkány- és egérirtás</p>
+<p class="d-only" style="margin:0;font-size:13.5px;line-height:1.5;color:var(--color-neutral-700);">egy kézből, lakóingatlanban és üzleti helyszínen</p>
+<p class="m-only" style="margin:0;font-size:13.5px;line-height:1.5;color:var(--color-neutral-700);">Egy kézből, lakóingatlanban és üzleti helyszínen — Budapest és Pest megye teljes területén.</p></div>
+<div class="rv" style="padding-left:28px;padding-right:20px;border-left:1px solid var(--color-divider);">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.01em;">3 módszer</p>
+<p style="margin:0;font-size:13.5px;line-height:1.5;color:var(--color-neutral-700);">irtószeres védekezés, kutyás/görényes módszer és csapdázás — a helyszín és a fertőzöttség szerint választva</p>
+</div>
+<div class="rv" style="padding-left:28px;padding-right:20px;border-left:1px solid var(--color-divider);">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.01em;">Budapest + Pest megye</p>
+<p style="margin:0;font-size:13.5px;line-height:1.5;color:var(--color-neutral-700);">a kiszolgált terület egységesen</p>
+</div>
+<div class="rv" style="padding-left:28px;border-left:1px solid var(--color-divider);">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.01em;">SOS kiszállás</p>
+<p style="margin:0;font-size:13.5px;line-height:1.5;color:var(--color-neutral-700);">sürgős esetben is hívható, felár ellenében</p>
+</div>
+</div>
+</section>
+<section style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div class="rv split" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(18px,4vw,40px);display:grid;grid-template-columns:1fr .8fr;gap:clamp(24px,4vw,56px);align-items:center;">
+<div>
+<h2 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.06;letter-spacing:-0.022em;margin:0 0 16px;max-width:18ch;">Minden nappal tovább szaporodnak</h2>
+<p style="margin:0;color:var(--color-neutral-700);font-size:16px;line-height:1.65;max-width:62ch;">Egy pár patkány néhány hónap alatt akár több tucat egyedre szaporodhat, és a kár is nő a vezetékekben, a szigetelésben, a raktározott árukban. Minél előbb lép, jellemzően annál egyszerűbb és olcsóbb a megoldás.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:stretch;">
+<a class="interaction-3" href="tel:+36203483026" style="display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;letter-spacing:.02em;padding:18px 24px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+          Hívom most: +36 20 348 3026
+        </a>
+<a class="interaction-6" href="#ajanlat" style="display:inline-flex;align-items:center;justify-content:flex-start;background:transparent;color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;letter-spacing:.02em;padding:18px 24px;border:2px solid #4c5139;color:#3f4530;">Ajánlatot kérek</a>
+</div>
+</div>
+</section>
+<section id="jelek" style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-300);letter-spacing:-0.04em;">01</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">FELISMERÉS</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 18px;max-width:20ch;">Honnan tudja, hogy patkánya van?</h2>
+<p class="rv" style="margin:0 0 44px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.65;max-width:64ch;">A legtöbb esetben nem magát az állatot látjuk meg elsőként, hanem a nyomait. Ha az alábbiak közül bármelyikre ráismer a lakása, kertje vagy telephelye körül, érdemes mielőbb szakembert hívni.</p>
+<div class="split" style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,56px);align-items:start;">
+<div style="border-top:2px solid var(--color-divider);">
+<article class="rv" style="display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--color-divider);">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:20px;color:var(--color-accent);line-height:1.2;">01</span>
+<div>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px;letter-spacing:-0.012em;">Rágásnyomok</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15px;line-height:1.6;">Kábeleken, csővezetékeken, ajtókereteken és élelmiszeres dobozokon megjelenő friss, viszonylag nagy méretű rágásnyomok.</p>
+</div>
+</article>
+<article class="rv" style="display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--color-divider);">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:20px;color:var(--color-accent);line-height:1.2;">02</span>
+<div>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px;letter-spacing:-0.012em;">Ürülék</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15px;line-height:1.6;">Orsó alakú, ujjbegynyi ürülékszemcsék pince, csatornaakna, udvar vagy raktár mentén.</p>
+</div>
+</article>
+<article class="rv" style="display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--color-divider);">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:20px;color:var(--color-accent);line-height:1.2;">03</span>
+<div>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px;letter-spacing:-0.012em;">Éjszakai neszek</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15px;line-height:1.6;">Kaparás, futkosás a falban, a padló alatt vagy a csatornarendszer felől, jellemzően este és éjszaka.</p>
+</div>
+</article>
+<article class="rv" style="display:grid;grid-template-columns:56px 1fr;gap:18px;padding:24px 0;border-bottom:2px solid var(--color-divider);">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:20px;color:var(--color-accent);line-height:1.2;">04</span>
+<div>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:19px;margin:0 0 6px;letter-spacing:-0.012em;">Járatok és üregek</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15px;line-height:1.6;">Frissen ásott, ökölnyi bejáratú üregek épület mellett, kertben vagy komposztáló környékén.</p>
+</div>
+</article>
+</div>
+<div class="rv" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:#c2b49c;">
+<figure style="margin:0;position:relative;">
+<div class="grayscale"><img alt="Patkányjárat és üreg bejárata épület mellett" height="1000" loading="lazy" src="images/patkany-jarat.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;" width="800"/></div>
+<figcaption style="position:absolute;left:0;bottom:0;background:#8f3c1e;color:#fdf1e7;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;margin:0;">Aktív patkányjárat</figcaption>
+</figure>
+<figure style="margin:0;position:relative;">
+<div class="grayscale"><img alt="Patkányürülék nyomai, amelyek jelenlétre utalnak" height="1000" loading="lazy" src="images/patkany-urulek.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;" width="800"/></div>
+<figcaption style="position:absolute;left:0;bottom:0;background:#8f3c1e;color:#fdf1e7;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;margin:0;">Ürülék nyoma</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="patkanyirtas" style="background:#eceee2;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-400);letter-spacing:-0.04em;">02</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">PATKÁNYIRTÁS</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 44px;max-width:22ch;">Patkányirtás Budapesten és Pest megyében</h2>
+<div class="split" style="display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,56px);align-items:start;">
+<div class="rv rev-media grayscale" style="border:2px solid var(--color-text);">
+<img alt="Patkányirtás ipari és kültéri környezetben" height="1500" loading="lazy" src="images/patkany.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;" width="1200"/>
+</div>
+<div class="rv">
+<p style="margin:0 0 24px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.7;max-width:64ch;">A patkány nagyobb testű és óvatosabb, mint az egér, épületszerkezetben és vezetékekben komoly kárt tud okozni, és jelenléte higiéniai kockázattal is jár. Csatornahálózat, udvar, kert, ipari telephely, komposztáló és hulladéktároló környékén a leggyakoribb a fertőzöttség.</p>
+<div style="border-left:4px solid var(--color-accent);padding:4px 0 4px 20px;margin:0 0 28px;">
+<p style="margin:0;font-size:15.5px;line-height:1.65;color:var(--color-neutral-800);"><strong style="font-family:var(--font-heading);font-weight:800;color:var(--color-text);">Hogyan zajlik a felmérés:</strong> a helyszínen azonosítjuk a járatokat, a bejutási pontokat és a fertőzöttség mértékét, majd ez alapján javasoljuk a megfelelő megoldást — irtószeres etetőláda-hálózatot, csapdázást, vagy megfelelő helyszíni adottságok esetén kutyás/görényes módszert.</p>
+</div>
+<ul style="list-style:none;margin:0 0 28px;padding:0;display:grid;gap:0;border-top:1px solid var(--color-divider);">
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;line-height:1.55;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Zárt, jelölt biztonsági etetőállomások — gyermekek és háziállatok nem férnek hozzájuk</li>
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;line-height:1.55;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Az etetőládák száma és elhelyezése a terület méretétől és a fertőzöttségtől függ</li>
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;line-height:1.55;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Az árat és a garancia feltételeit a helyszíni adottságok befolyásolják</li>
+</ul>
+<div style="display:flex;gap:16px;align-items:flex-start;background:#faf7f2;border:1px solid var(--color-divider);padding:16px;margin:0 0 28px;">
+<div class="grayscale" style="flex-shrink:0;"><img alt="Zárt, jelölt biztonsági etetőláda irtószeres patkányirtáshoz" height="90" loading="lazy" src="images/etetolada.webp" style="width:72px;height:72px;object-fit:cover;" width="90"/></div>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Így néz ki a zárt, jelölt biztonsági etetőláda, amelybe az irtószer kerül — gyermekek és háziállatok nem férnek hozzá.</p>
+</div>
+<div style="display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;background:#8f3c1e;color:#fdf1e7;padding:14px 20px;margin:0 0 24px;">
+<strong style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;color:#fdf9f3;">39 000 Ft-tól</strong>
+<span style="font-size:13.5px;color:#cfc6b9;">3 db irtószeres etetőláda kihelyezésével és feltöltésével</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;">
+<a class="interaction-3" data-conversion-action="phone" href="tel:+36203483026" id="pest-call" style="display:inline-flex;align-items:center;gap:10px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:15px 22px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
               Hívás: +36 20 348 3026
             </a>
-            <span class="feature-cta__note">H–P 8:00–18:00 · SOS kiszállás igény esetén</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- KUTYÁS / GÖRÉNYES KIEMELÉS -->
-      <div class="methods-callout" id="kutyas-gorenyes">
-        <span class="methods-callout__badge">Kiegészítő módszer</span>
-        <h3 class="method__title">Kutyás és görényes patkányirtás</h3>
-        <p>A görény bejut a patkányok föld alatti járat- és üregrendszerébe; jelenléte és mozgása a rejtekhelyekről a felszínre hajthatja a kifejlett patkányokat, amelyek kezelésében a kiképzett kutya vesz részt. A járatban vagy a fészek közelében maradó egyedekkel szemben a görény közvetlenül is felléphet. Ez a módszer nem alkalmazható minden helyszínen — bevetését mindig a terület adottságai határozzák meg, és elsősorban a megfelelő kültéri, kiterjedt járatrendszerrel érintett fertőzöttségnél lehet releváns, Budapest területén.</p>
-
-          <div class="method-media-grid">
-            <figure><img src="images/kutya-patkany.webp" alt="Kiképzett kutya patkánykeresés közben" loading="lazy" width="600" height="600"></figure>
-            <figure><img src="images/irtas-gorennyel.webp" alt="Görényes patkányirtás üregrendszerben" loading="lazy" width="600" height="600"></figure>
-            <figure><img src="images/goreny-szakember.webp" alt="Szakember görénnyel patkányirtás közben" loading="lazy" width="600" height="600"></figure>
-          </div>
-
-        <div class="method-note">
-          <span class="method-note__icon" aria-hidden="true">i</span>
-          <p>A végleges ár a fertőzöttség mértékétől, a terület méretétől és a helyszíni, illetve műszaki adottságoktól (megközelíthetőség, üregrendszer kiterjedtsége) függ — ezért mindig a felmérés után adunk pontos ajánlatot.</p>
-        </div>
-
-        <div class="feature__price">
-          <strong>65 000 Ft-tól</strong>
-          <span>Budapesten, a helyszín adottságai szerint</span>
-        </div>
-
-        <div class="feature-cta">
-          <a class="btn btn--primary" href="#ajanlat" data-conversion-action="quote">Ajánlatot kérek</a>
-          <span class="feature-cta__note">Jelenleg Budapest területén elérhető</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EGÉRIRTÁS ===== -->
-  <section class="section section--paper" id="egerirtas">
-    <div class="container">
-      <p class="kicker reveal">03 — EGÉRIRTÁS</p>
-      <h2 class="section-title reveal">Egérirtás lakóingatlanban és üzleti helyszínen</h2>
-
-      <div class="feature feature--reverse">
-        <div class="feature__media reveal">
-          <img src="images/egerirtas.webp" alt="Egérirtás előkészítése lakókörnyezetben" loading="lazy" width="1200" height="1500">
-        </div>
-        <div class="feature__body reveal">
-          <p>Az egér kisebb, mint a patkány, de ugyanolyan gyorsan elszaporodik, és jellemzően nehezebben észrevehető. A tipikus jelek: apró, rizsszem méretű ürülékszemcsék konyhaszekrényben vagy kamrában, finom rágásnyomok élelmiszeres csomagoláson és vezetékeken, halk motoszkálás a falban vagy az álmennyezet felett.</p>
-          <p>Az egér a legapróbb réseken is bejut — nyílászárók, szellőzők, csővezetékek körüli tömítetlen pontokon keresztül. A kezelést mindig a helyszíni adottságok — az ingatlan típusa, a bejutási pontok száma, a fertőzöttség mértéke — alapján tervezzük meg, lakásban, családi házban, társasházban és üzleti ingatlanban egyaránt.</p>
-
-          <ul class="feature__list">
-            <li>Lakás, családi ház, társasház</li>
-            <li>Üzlet, iroda, raktár és egyéb üzleti ingatlan</li>
-            <li>Bejutási pontok feltérképezése és a kezelés egyedi megtervezése</li>
-          </ul>
-
-          <div class="feature__price">
-            <strong>34 000 Ft-tól</strong>
-            <span>a helyszíni felmérés alapján, a fertőzöttség mértékétől függően</span>
-          </div>
-
-          <div class="feature-cta">
-            <a class="btn btn--accent" href="#ajanlat" data-conversion-action="quote">Egérirtás ajánlatkérés</a>
-            <span class="feature-cta__note">Válaszunkban pontos, helyszínfüggő árat adunk</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOLYAMAT ===== -->
-  <section class="section section--sage" id="folyamat">
-    <div class="container">
-      <p class="kicker reveal">ÁTTEKINTÉS</p>
-      <h2 class="section-title reveal">Így dolgozunk</h2>
-      <ol class="timeline timeline--process reveal">
-        <li class="timeline__step">
-          <span class="timeline__num">01</span>
-          <h3>Bejelentés</h3>
-          <p>Telefonon vagy az ajánlatkérő űrlapon jelzi a problémát, és röviden leírja a helyszínt.</p>
-        </li>
-        <li class="timeline__step">
-          <span class="timeline__num">02</span>
-          <h3>Helyszíni felmérés</h3>
-          <p>Szakemberünk felméri a területet, a bejutási pontokat és a fertőzöttség mértékét.</p>
-        </li>
-        <li class="timeline__step">
-          <span class="timeline__num">03</span>
-          <h3>Módszer és irtás</h3>
-          <p>A felmérés alapján a helyszínhez és a fertőzöttség mértékéhez illő módszert alkalmazzuk.</p>
-        </li>
-        <li class="timeline__step">
-          <span class="timeline__num">04</span>
-          <h3>Utóellenőrzés</h3>
-          <p>A garancia feltételeitől függően visszatérünk, hogy megbizonyosodjunk az eredményről.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ===== ÁRAK ===== -->
-  <section class="section section--paper" id="arak">
-    <div class="container">
-      <p class="kicker reveal">04 — ÁRAK</p>
-      <h2 class="section-title reveal">Patkányirtás és felmérés árak</h2>
-      <p class="section-lead reveal">Az alábbi árak induló, tájékoztató jellegű összegek. A pontos ajánlatot a helyszíni felmérés után adjuk meg, a terület mérete és a fertőzöttség mértéke alapján.</p>
-
-      <div class="pricing__table-wrap reveal">
-        <table class="pricing__table">
-          <thead>
-            <tr>
-              <th scope="col">Szolgáltatás</th>
-              <th scope="col">Mit tartalmaz</th>
-              <th scope="col">Ár</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                Helyszíni felmérés — Budapest
-              </th>
-              <td data-label="Mit tartalmaz">Fertőzöttség felmérése, bejutási pontok azonosítása, javasolt megoldás</td>
-              <td class="pricing__price" data-label="Ár"><strong>15 000 Ft</strong></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                Helyszíni felmérés — Pest megye
-              </th>
-              <td data-label="Mit tartalmaz">A díj a kiszállási távolságtól is függ</td>
-              <td class="pricing__price" data-label="Ár"><strong>25 000 Ft</strong><span class="pricing__unit">-tól</span></td>
-            </tr>
-            <tr class="pricing__row--featured">
-              <th scope="row" data-label="Szolgáltatás">
-                Patkányirtás
-                <span class="pricing__sub">Irtószeres alapmegoldás</span>
-              </th>
-              <td data-label="Mit tartalmaz">3 db irtószeres etetőláda kihelyezése és feltöltése; nagyobb terület/fertőzöttség esetén több</td>
-              <td class="pricing__price" data-label="Ár"><strong>39 000 Ft</strong><span class="pricing__unit">-tól</span></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                Kutyás / görényes patkányirtás
-              </th>
-              <td data-label="Mit tartalmaz">Nagy alapterületű ingatlan, kiterjedt üregrendszer — Budapest területén</td>
-              <td class="pricing__price" data-label="Ár"><strong>65 000 Ft</strong><span class="pricing__unit">-tól</span></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                Egérirtás
-              </th>
-              <td data-label="Mit tartalmaz">Lakóingatlan, társasház vagy üzleti ingatlan, helyszíni felmérés alapján</td>
-              <td class="pricing__price" data-label="Ár"><strong>34 000 Ft</strong><span class="pricing__unit">-tól</span></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                SOS kiszállás
-              </th>
-              <td data-label="Mit tartalmaz">Sürgős esetben, soron kívüli kiszállással</td>
-              <td class="pricing__price" data-label="Ár"><strong>70 000 Ft</strong></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                SOS besurranó patkányirtás
-              </th>
-              <td data-label="Mit tartalmaz">Váratlanul, egyedileg bejutott patkány sürgős kezelése — pl. kertben tartott baromfinál vagy társasházban</td>
-              <td class="pricing__price" data-label="Ár"><strong>75 000 Ft</strong></td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Szolgáltatás">
-                Társasház / üzleti ingatlan
-              </th>
-              <td data-label="Mit tartalmaz">Irányár, a pontos díjat a helyszín alapján adjuk meg</td>
-              <td class="pricing__price" data-label="Ár"><strong>50 000–60 000 Ft</strong><span class="pricing__unit">-tól</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <ul class="pricing__notes reveal">
-        <li>A helyszíni felmérés díjköteles, Budapesten és Pest megyében egyaránt.</li>
-        <li>A patkányirtás, az egérirtás és a kutyás/görényes szolgáltatás végleges ára a terület méretétől és a fertőzöttség mértékétől függ.</li>
-        <li>HACCP-s, illetve nagyobb üzleti megbízásokra mindig egyedi ajánlatot adunk.</li>
-      </ul>
-
-      <div class="pricing__cta reveal">
-        <a class="btn btn--primary" id="price-quote" data-conversion-action="quote" href="#ajanlat">Kérem az ajánlatot</a>
-        <a class="btn btn--ghost" href="tel:+36203483026">Inkább hívok</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SOS ===== -->
-  <section class="section sos" id="sos">
-    <div class="container">
-      <p class="kicker reveal">05 — SOS SZOLGÁLTATÁS</p>
-      <h2 class="section-title reveal">Sürgős esetben</h2>
-      <p class="section-lead reveal">Ha a probléma nem várhat a következő szabad időpontig, két sürgősségi szolgáltatás közül választhat. A kiszállás időpontját telefonos egyeztetéskor tudjuk pontosan megmondani.</p>
-
-      <div class="sos__grid">
-        <div class="sos-card reveal">
-          <p class="sos-card__price">70 000 Ft</p>
-          <h3>SOS kiszállás</h3>
-          <p>Soron kívüli, sürgősségi kiszállás, amikor a probléma gyors beavatkozást igényel és nem fér bele a szokásos beosztásba.</p>
-          <a class="btn btn--accent" id="sos-call" data-conversion-action="phone" href="tel:+36203483026">SOS segítséget kérek</a>
-        </div>
-        <div class="sos-card reveal">
-          <p class="sos-card__price">75 000 Ft</p>
-          <h3>SOS besurranó patkányirtás</h3>
-          <p>Amikor egy-egy patkány váratlanul, egyedileg jut be egy ingatlanba — például kertben tartott baromfi közelébe, társasházi pincébe, lépcsőházba, vagy bármely más helyszínre —, gyors és célzott beavatkozásra van szükség.</p>
-          <a class="btn btn--accent" href="tel:+36203483026">SOS segítséget kérek</a>
-        </div>
-      </div>
-
-      <p class="sos__disclaimer">A pontos kiérkezési időt minden esetben telefonos egyeztetéskor mondjuk meg — ez a helyszíntől és az aktuális leterheltségtől függ.</p>
-    </div>
-  </section>
-
-  <!-- ===== TÁRSASHÁZ / B2B / HACCP ===== -->
-  <section class="section section--paper" id="tarsashaz">
-    <div class="container">
-      <p class="kicker reveal">06 — TÁRSASHÁZ ÉS ÜZLETI ÜGYFELEK</p>
-      <h2 class="section-title reveal">Társasházak, vendéglátóhelyek és üzleti ingatlanok</h2>
-
-      <div class="b2b__grid">
-        <div class="reveal">
-          <p class="section-lead" style="margin-bottom:1rem;">Rendszeresen dolgozunk üzleti és közösségi ingatlanokkal, ahol a patkány- vagy egérprobléma több lakót, munkatársat vagy vendéget is érint.</p>
-          <ul class="b2b__tags">
-            <li>Társasház</li>
-            <li>Vendéglátóhely</li>
-            <li>Üzlet</li>
-            <li>Iroda</li>
-            <li>Raktár</li>
-            <li>Egyéb üzleti ingatlan</li>
-          </ul>
-          <p>A társasházi munkák terjedelme ingatlanonként jelentősen eltér — a lépcsőházak, pincék és udvarok száma és állapota alapján mindig egyedi felmérést és ajánlatot adunk.</p>
-        </div>
-        <div class="reveal">
-          <div class="b2b-card">
-            <h3>Társasház</h3>
-            <p><strong>50 000–60 000 Ft-tól</strong>, irányár — a végleges díjat a helyszín (épületek száma, pincék, udvar) alapján határozzuk meg.</p>
-          </div>
-          <div class="b2b-card">
-            <h3>HACCP-s vendéglátóhely, üzlet</h3>
-            <p>Egyedi ajánlat — keressen bizalommal. A kártevőmentesítés ütemezését és dokumentációját a helyszín és az Önök folyamatai alapján egyeztetjük.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GARANCIA ===== -->
-  <section class="section section--sage" id="garancia">
-    <div class="container">
-      <p class="kicker reveal">07 — GARANCIA</p>
-      <h2 class="section-title reveal">Amit a garanciáról tudni érdemes</h2>
-
-      <div class="guarantee">
-        <div class="guarantee__box reveal">
-          <p>A garancia lehetősége és a pontos feltételei nem egységesek — ezeket a fertőzöttség mértéke, a helyszíni és műszaki adottságok, valamint az elvégzett munka jellege határozza meg.</p>
-          <p>A konkrét feltételeket a helyszíni felmérés vagy a munka elvégzése után, az adott ingatlan és probléma ismeretében adjuk meg, írásban is.</p>
-        </div>
-        <div class="reveal">
-          <div class="why__grid">
-            <div class="why-card">
-              <h3>Utóellenőrzés</h3>
-              <p>A garanciális feltételektől függően visszatérünk, hogy ellenőrizzük az eredményt.</p>
-            </div>
-            <div class="why-card">
-              <h3>Számlaképesség</h3>
-              <p>Minden elvégzett munkáról hivatalos számlát állítunk ki.</p>
-            </div>
-            <div class="why-card">
-              <h3>Engedélyezett szerek</h3>
-              <p>Kizárólag professzionális, jogszerűen forgalmazott készítményeket használunk.</p>
-            </div>
-            <div class="why-card">
-              <h3>Diszkréció</h3>
-              <p>Kérésre jelöletlen megjelenéssel, visszafogott kommunikációval dolgozunk.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EGYÉB KÁRTEVŐ CTA ===== -->
-  <section class="section section--paper" style="padding-block: clamp(2rem, 4vw, 3rem);">
-    <div class="container">
-      <div class="other-pests reveal">
-        <div class="other-pests__inner">
-          <div class="other-pests__text">
-            <h2>Egyéb kártevő okoz problémát?</h2>
-            <p>Ha nem patkányról vagy egérről van szó, írja meg az ajánlatkérő űrlapon, milyen kártevővel találkozott — visszajelzünk, tudunk-e segíteni.</p>
-          </div>
-          <a class="btn btn--primary btn--lg" href="#ajanlat" data-conversion-action="quote">Kérjen ajánlatot</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GYIK ===== -->
-  <section class="section section--sage" id="gyik">
-    <div class="container">
-      <p class="kicker reveal">08 — GYIK</p>
-      <h2 class="section-title reveal">Gyakori kérdések</h2>
-
-      <div class="faq__list reveal">
-        <details class="faq-item">
-          <summary>Mennyibe kerül a patkányirtás?</summary>
-          <p>Az alapár 39 000 Ft-tól indul, ez 3 db irtószeres etetőláda kihelyezését tartalmazza. A végleges ár a helyszín adottságaitól, méretétől és a fertőzöttség mértékétől függ.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Mit tartalmaz a 39 000 Ft-tól induló ár?</summary>
-          <p>3 db zárt, jelölt irtószeres etetőláda kihelyezését és feltöltését. Nagyobb terület vagy erősebb fertőzöttség esetén ennél több ládára és munkára lehet szükség — ezt a felmérés után pontosan megmondjuk.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Mennyi a helyszíni felmérés díja?</summary>
-          <p>Budapesten 15 000 Ft, Pest megyében 25 000 Ft-tól — itt a díj a kiszállási távolságtól is függ.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Pest megyében is dolgoznak?</summary>
-          <p>Igen, Budapest mellett Pest megyében is vállalunk munkát.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Van SOS patkányirtás?</summary>
-          <p>Igen. SOS kiszállás 70 000 Ft, SOS besurranó patkányirtás — például kertben tartott baromfi közelébe vagy társasházba váratlanul bejutott, egyedi patkány esetén — 75 000 Ft.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Mitől függ a garancia?</summary>
-          <p>A fertőzöttség mértékétől, a helyszíni adottságoktól és az elvégzett munka jellegétől — a pontos feltételeket a helyszín ismeretében adjuk meg.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Vállalnak társasházat?</summary>
-          <p>Igen, társasházi megbízásoknál az irányár 50 000–60 000 Ft-tól indul, a pontos díjat a helyszín alapján adjuk meg.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Van egérirtás?</summary>
-          <p>Igen, lakóingatlanban, társasházban és üzleti ingatlanban egyaránt, 34 000 Ft-tól induló árral. A végleges díjat a helyszíni felmérés alapján adjuk meg.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Hogyan kérhetek ajánlatot?</summary>
-          <p>Hívjon minket telefonon, vagy töltse ki az alábbi ajánlatkérő űrlapot — rövid időn belül visszahívjuk.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AJÁNLATKÉRŐ ŰRLAP ===== -->
-  <section class="section quote" id="ajanlat">
-    <div class="container quote__inner">
-      <div class="quote__intro reveal">
-        <p class="kicker">09 — AJÁNLATKÉRÉS</p>
-        <h2 class="section-title">Kérjen ajánlatot</h2>
-        <p>Töltse ki az űrlapot, és rövid időn belül visszahívjuk — vagy hívjon minket most, ha sürgős.</p>
-
-        <div class="quote__phone-card">
-          <p class="quote__phone-label">Vagy hívjon most</p>
-          <a class="quote__phone-number" href="tel:+36203483026">+36 20 348 3026</a>
-          <p class="quote__hours">Nyitvatartás: H–P 8:00–18:00</p>
-        </div>
-      </div>
-
-      <form class="quote-form reveal" action="/send-form.php" method="post" novalidate>
-        <div class="quote-form__row">
-          <label for="f-nev">Név <span aria-hidden="true">*</span></label>
-          <input type="text" id="f-nev" name="nev" required autocomplete="name">
-          <span class="quote-form__error" data-error-for="f-nev"></span>
-        </div>
-
-        <div class="quote-form__row">
-          <label for="f-telefon">Telefonszám <span aria-hidden="true">*</span></label>
-          <input type="tel" id="f-telefon" name="telefon" required autocomplete="tel">
-          <span class="quote-form__error" data-error-for="f-telefon"></span>
-        </div>
-
-        <div class="quote-form__row">
-          <label for="f-email">E-mail</label>
-          <input type="email" id="f-email" name="email" autocomplete="email">
-          <span class="quote-form__error" data-error-for="f-email"></span>
-        </div>
-
-        <div class="quote-form__row">
-          <label for="f-telepules">Település / kerület <span aria-hidden="true">*</span></label>
-          <input type="text" id="f-telepules" name="telepules" required autocomplete="address-level2">
-          <span class="quote-form__error" data-error-for="f-telepules"></span>
-        </div>
-
-        <div class="quote-form__row quote-form__row--full">
-          <label for="f-szolgaltatas">Szolgáltatás típusa</label>
-          <select id="f-szolgaltatas" name="szolgaltatas">
-            <option value="patkanyirtas">Patkányirtás</option>
-            <option value="egerirtas">Egérirtás</option>
-            <option value="sos">SOS patkányirtás</option>
-            <option value="kutyas_gorenyes">Kutyás / görényes</option>
-            <option value="tarsashaz_uzleti">Társasház / üzleti</option>
-            <option value="egyeb">Egyéb</option>
-          </select>
-        </div>
-
-        <div class="quote-form__row quote-form__row--full">
-          <label for="f-uzenet">Üzenet</label>
-          <textarea id="f-uzenet" name="uzenet" rows="4"></textarea>
-        </div>
-
-        <!-- Honeypot mező, botok ellen -->
-        <div class="quote-form__honeypot" aria-hidden="true">
-          <label for="f-website">Weboldal</label>
-          <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
-        </div>
-        <input type="hidden" name="form_loaded_at" id="f-loaded-at" value="">
-
-        <div class="quote-form__row quote-form__row--full quote-form__row--checkbox">
-          <input type="checkbox" id="f-adatkezeles" name="adatkezeles" required>
-          <label for="f-adatkezeles">Elolvastam és elfogadom az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatót</a>. <span aria-hidden="true">*</span></label>
-          <span class="quote-form__error" data-error-for="f-adatkezeles"></span>
-        </div>
-
-        <div class="quote-form__row quote-form__row--full">
-          <button type="submit" class="btn btn--accent btn--lg btn--block" id="form-submit" data-conversion-action="quote">Ajánlatot kérek</button>
-          <p class="quote-form__status" id="formStatus" role="status" aria-live="polite"></p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- ===== VÉGSŐ CTA ===== -->
-  <section class="final-cta">
-    <div class="container final-cta__inner reveal">
-      <h2>Ne várjon, amíg elszaporodnak</h2>
-      <p>Hívjon most, vagy kérjen ajánlatot — Budapesten és Pest megyében is rövid időn belül tudunk időpontot egyeztetni.</p>
-      <div class="final-cta__actions">
-        <a class="btn btn--accent btn--lg" href="tel:+36203483026">Hívom most: +36 20 348 3026</a>
-        <a class="btn btn--outline-light btn--lg" href="#ajanlat">Ajánlatot kérek</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer" id="kapcsolat">
-  <div class="container site-footer__grid">
-    <div class="site-footer__col">
-      <p class="logo--footer">A-Leco Management Kft.</p>
-      <p>Patkányirtás és egérirtás Budapest és Pest megye területén.</p>
-    </div>
-    <div class="site-footer__col">
-      <h3>Elérhetőség</h3>
-      <p><a href="tel:+36203483026" id="footer-call" data-conversion-action="phone">+36 20 348 3026</a></p>
-      <p><a href="mailto:sevenautoszer@gmail.com">sevenautoszer@gmail.com</a></p>
-      <p>Budapest, Kámfor u. 28., 1131</p>
-    </div>
-    <div class="site-footer__col">
-      <h3>Cégadatok</h3>
-      <p>A-Leco Management Kft.</p>
-      <p>Adószám: 24676524-1-42</p>
-      <p>Nyitvatartás: H–P 8:00–18:00</p>
-    </div>
-    <div class="site-footer__col">
-      <h3>Oldal</h3>
-      <p><a href="#patkanyirtas">Patkányirtás</a></p>
-      <p><a href="#egerirtas">Egérirtás</a></p>
-      <p><a href="#arak">Árak</a></p>
-      <p><a href="adatkezeles.html">Adatkezelési tájékoztató</a></p>
-      <p><a href="cookie-tajekoztato.html">Cookie tájékoztató</a></p>
-      <p><button type="button" class="footer-link-btn" data-cookie-open-settings>Cookie beállítások</button></p>
-    </div>
-  </div>
-  <div class="container site-footer__bottom">
-    <p>&copy; <span id="year"></span> A-Leco Management Kft. Minden jog fenntartva.</p>
-  </div>
-</footer>
-
-<div class="mobile-cta-spacer" aria-hidden="true"></div>
-<div class="mobile-sticky-cta" aria-label="Gyors elérhetőség">
-  <a class="btn btn--primary" id="mobile-call" data-conversion-action="phone" href="tel:+36203483026">Hívás</a>
-  <a class="btn btn--accent" id="mobile-quote" data-conversion-action="quote" href="#ajanlat">Ajánlatkérés</a>
+<span style="color:var(--color-neutral-600);font-size:13.5px;">H–P 8:00–18:00 · SOS kiszállás igény esetén</span>
 </div>
-
+</div>
+</div>
+<div class="rv" id="kutyas-gorenyes" style="margin-top:clamp(44px,6vw,80px);background:#3f4530;color:#f2f0e2;padding:clamp(28px,4vw,56px);">
+<span style="display:inline-block;background:var(--color-accent);color:#fdf9f3;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;margin-bottom:20px;">Kiegészítő módszer</span>
+<h3 style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:clamp(24px,3vw,38px);line-height:1.06;letter-spacing:-0.022em;margin:0 0 20px;max-width:20ch;">Kutyás és görényes patkányirtás</h3>
+<p style="margin:0 0 32px;color:#d9d0c4;font-size:16px;line-height:1.7;max-width:72ch;">A görény bejut a patkányok föld alatti járat- és üregrendszerébe; jelenléte és mozgása a rejtekhelyekről a felszínre hajthatja a kifejlett patkányokat, amelyek kezelésében a kiképzett kutya vesz részt. A járatban vagy a fészek közelében maradó egyedekkel szemben a görény közvetlenül is felléphet. Ez a módszer nem alkalmazható minden helyszínen — bevetését mindig a terület adottságai határozzák meg, és elsősorban a megfelelő kültéri, kiterjedt járatrendszerrel érintett fertőzöttségnél lehet releváns, Budapest területén.</p>
+<div class="three-up" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:rgba(245,236,224,.3);margin:0 0 32px;">
+<figure style="margin:0;"><div class="grayscale"><img alt="Kiképzett kutya patkánykeresés közben" height="600" loading="lazy" src="images/kutya-patkany.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;" width="600"/></div></figure>
+<figure style="margin:0;"><div class="grayscale"><img alt="Görényes patkányirtás üregrendszerben" height="600" loading="lazy" src="images/irtas-gorennyel.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;" width="600"/></div></figure>
+<figure style="margin:0;"><div class="grayscale"><img alt="Szakember görénnyel patkányirtás közben" height="600" loading="lazy" src="images/goreny-szakember.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;" width="600"/></div></figure>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;border-top:1px solid rgba(245,236,224,.25);border-bottom:1px solid rgba(245,236,224,.25);padding:20px 0;margin:0 0 28px;">
+<span aria-hidden="true" style="flex-shrink:0;width:30px;height:30px;background:var(--color-accent);color:#fdf9f3;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:15px;">i</span>
+<p style="margin:0;color:#d9d0c4;font-size:14.5px;line-height:1.65;max-width:74ch;">A végleges ár a fertőzöttség mértékétől, a terület méretétől és a helyszíni, illetve műszaki adottságoktól (megközelíthetőség, üregrendszer kiterjedtsége) függ — ezért mindig a felmérés után adunk pontos ajánlatot.</p>
+</div>
+<div style="display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;border:2px solid var(--color-accent);padding:14px 20px;margin:0 0 24px;">
+<strong style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;color:#fdf9f3;">65 000 Ft-tól</strong>
+<span style="font-size:13.5px;color:#cfc6b9;">Budapesten, a helyszín adottságai szerint</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;">
+<a class="interaction-4" data-conversion-action="quote" href="#ajanlat" style="display:inline-flex;align-items:center;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:15px 22px;border:2px solid var(--color-accent);">Ajánlatot kérek</a>
+<span style="color:#b5aa9c;font-size:13.5px;">Jelenleg Budapest területén elérhető</span>
+</div>
+</div>
+</div>
+</section>
+<section id="egerirtas" style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-300);letter-spacing:-0.04em;">03</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">EGÉRIRTÁS</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 44px;max-width:22ch;">Egérirtás lakóingatlanban és üzleti helyszínen</h2>
+<div class="split split-rev" style="display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(28px,4vw,56px);align-items:start;">
+<div class="rv">
+<p style="margin:0 0 20px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.7;max-width:64ch;">Az egér kisebb, mint a patkány, de ugyanolyan gyorsan elszaporodik, és jellemzően nehezebben észrevehető. A tipikus jelek: apró, rizsszem méretű ürülékszemcsék konyhaszekrényben vagy kamrában, finom rágásnyomok élelmiszeres csomagoláson és vezetékeken, halk motoszkálás a falban vagy az álmennyezet felett.</p>
+<p style="margin:0 0 28px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.7;max-width:64ch;">Az egér a legapróbb réseken is bejut — nyílászárók, szellőzők, csővezetékek körüli tömítetlen pontokon keresztül. A kezelést mindig a helyszíni adottságok — az ingatlan típusa, a bejutási pontok száma, a fertőzöttség mértéke — alapján tervezzük meg, lakásban, családi házban, társasházban és üzleti ingatlanban egyaránt.</p>
+<ul style="list-style:none;margin:0 0 28px;padding:0;border-top:1px solid var(--color-divider);">
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Lakás, családi ház, társasház</li>
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Üzlet, iroda, raktár és egyéb üzleti ingatlan</li>
+<li style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--color-divider);color:var(--color-neutral-800);font-size:15px;"><span style="flex-shrink:0;color:var(--color-accent);font-weight:800;">—</span>Bejutási pontok feltérképezése és a kezelés egyedi megtervezése</li>
+</ul>
+<div style="display:inline-flex;align-items:baseline;gap:12px;flex-wrap:wrap;background:#8f3c1e;color:#fdf1e7;padding:14px 20px;margin:0 0 24px;">
+<strong style="font-family:var(--font-heading);font-weight:800;font-size:26px;letter-spacing:-0.02em;color:#fdf9f3;">34 000 Ft-tól</strong>
+<span style="font-size:13.5px;color:#cfc6b9;">a helyszíni felmérés alapján, a fertőzöttség mértékétől függően</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;">
+<a class="interaction-3" data-conversion-action="quote" href="#ajanlat" style="display:inline-flex;align-items:center;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:15px 22px;border:2px solid var(--color-accent);">Egérirtás ajánlatkérés</a>
+<span style="color:var(--color-neutral-600);font-size:13.5px;">Válaszunkban pontos, helyszínfüggő árat adunk</span>
+</div>
+</div>
+<div class="rv rev-media grayscale" style="border:2px solid var(--color-text);">
+<img alt="Egérirtás előkészítése lakókörnyezetben" height="1500" loading="lazy" src="images/egerirtas.webp" style="width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;" width="1200"/>
+</div>
+</div>
+</div>
+</section>
+<section id="folyamat" style="background:#f5ebdc;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<p class="rv" style="margin:0 0 12px;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">Áttekintés</p>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 44px;">Így dolgozunk</h2>
+<ol class="steps rv" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:2px solid var(--color-text);">
+<li style="padding:28px 24px 28px 0;border-right:1px solid var(--color-divider);position:relative;">
+<span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em;color:var(--color-accent);margin-bottom:16px;">01</span>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:18px;margin:0 0 8px;letter-spacing:-0.012em;">Bejelentés</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Telefonon vagy az ajánlatkérő űrlapon jelzi a problémát, és röviden leírja a helyszínt.</p>
+</li>
+<li style="padding:28px 24px;border-right:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em;color:#8d9068;margin-bottom:16px;">02</span>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:18px;margin:0 0 8px;letter-spacing:-0.012em;">Helyszíni felmérés</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Szakemberünk felméri a területet, a bejutási pontokat és a fertőzöttség mértékét.</p>
+</li>
+<li style="padding:28px 24px;border-right:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em;color:#8d9068;margin-bottom:16px;">03</span>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:18px;margin:0 0 8px;letter-spacing:-0.012em;">Módszer és irtás</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">A felmérés alapján a helyszínhez és a fertőzöttség mértékéhez illő módszert alkalmazzuk.</p>
+</li>
+<li style="padding:28px 0 28px 24px;">
+<span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;letter-spacing:-0.04em;color:#8d9068;margin-bottom:16px;">04</span>
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:18px;margin:0 0 8px;letter-spacing:-0.012em;">Utóellenőrzés</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">A garancia feltételeitől függően visszatérünk, hogy megbizonyosodjunk az eredményről.</p>
+</li>
+</ol>
+</div>
+</section>
+<section id="arak" style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-300);letter-spacing:-0.04em;">04</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">ÁRAK</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 18px;max-width:20ch;">Patkányirtás és felmérés árak</h2>
+<p class="rv" style="margin:0 0 40px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.65;max-width:64ch;">Az alábbi árak induló, tájékoztató jellegű összegek. A pontos ajánlatot a helyszíni felmérés után adjuk meg, a terület mérete és a fertőzöttség mértéke alapján.</p>
+<div class="rv" style="border-top:2px solid var(--color-text);">
+<div class="price-head" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:14px 0;border-bottom:2px solid var(--color-text);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-700);">
+<div>Szolgáltatás</div><div>Mit tartalmaz</div><div style="text-align:right;">Ár</div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Helyszíni felmérés — Budapest</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Fertőzöttség felmérése, bejutási pontok azonosítása, javasolt megoldás</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">15 000 Ft</strong></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Helyszíni felmérés — Pest megye</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">A díj a kiszállási távolságtól is függ</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">25 000 Ft</strong><span style="display:block;font-size:12px;color:var(--color-neutral-600);">-tól</span></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:24px 16px;margin:0 -16px;border-bottom:1px solid var(--color-divider);align-items:baseline;background:var(--color-accent-100);border-left:4px solid var(--color-accent);">
+<div>
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Patkányirtás</div>
+<div style="font-size:13px;color:var(--color-neutral-700);margin-top:3px;">Irtószeres alapmegoldás</div>
+</div>
+<div style="color:var(--color-neutral-800);font-size:14.5px;line-height:1.6;">3 db irtószeres etetőláda kihelyezése és feltöltése; nagyobb terület/fertőzöttség esetén több</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:22px;letter-spacing:-0.015em;color:var(--color-accent-700);">39 000 Ft</strong><span style="display:block;font-size:12px;color:var(--color-neutral-700);">-tól</span></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Kutyás / görényes patkányirtás</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Nagy alapterületű ingatlan, kiterjedt üregrendszer — Budapest területén</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">65 000 Ft</strong><span style="display:block;font-size:12px;color:var(--color-neutral-600);">-tól</span></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Egérirtás</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Lakóingatlan, társasház vagy üzleti ingatlan, helyszíni felmérés alapján</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">34 000 Ft</strong><span style="display:block;font-size:12px;color:var(--color-neutral-600);">-tól</span></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">SOS kiszállás</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Sürgős esetben, soron kívüli kiszállással</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">70 000 Ft</strong></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--color-divider);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">SOS besurranó patkányirtás</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Váratlanul, egyedileg bejutott patkány sürgős kezelése — pl. kertben tartott baromfinál vagy társasházban</div>
+<div class="pv" style="text-align:right;white-space:nowrap;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">75 000 Ft</strong></div>
+</div>
+<div class="price-row" style="display:grid;grid-template-columns:1.05fr 1.55fr .55fr;gap:24px;padding:22px 0;border-bottom:2px solid var(--color-text);align-items:baseline;">
+<div style="font-family:var(--font-heading);font-weight:800;font-size:16.5px;letter-spacing:-0.012em;">Társasház / üzleti ingatlan</div>
+<div style="color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Irányár, a pontos díjat a helyszín alapján adjuk meg</div>
+<div class="pv" style="text-align:right;"><strong style="font-family:var(--font-heading);font-weight:800;font-size:19px;letter-spacing:-0.015em;">50 000–60 000 Ft</strong><span style="display:block;font-size:12px;color:var(--color-neutral-600);">-tól</span></div>
+</div>
+</div>
+<ul class="rv" style="margin:26px 0 0;padding:0;list-style:none;display:grid;gap:10px;max-width:72ch;">
+<li style="display:flex;gap:10px;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;"><span style="color:var(--color-accent);font-weight:800;flex-shrink:0;">·</span>A helyszíni felmérés díjköteles, Budapesten és Pest megyében egyaránt.</li>
+<li style="display:flex;gap:10px;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;"><span style="color:var(--color-accent);font-weight:800;flex-shrink:0;">·</span>A patkányirtás, az egérirtás és a kutyás/görényes szolgáltatás végleges ára a terület méretétől és a fertőzöttség mértékétől függ.</li>
+<li style="display:flex;gap:10px;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;"><span style="color:var(--color-accent);font-weight:800;flex-shrink:0;">·</span>HACCP-s, illetve nagyobb üzleti megbízásokra mindig egyedi ajánlatot adunk.</li>
+</ul>
+<div class="rv" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;">
+<a class="interaction-3" data-conversion-action="quote" href="#ajanlat" id="price-quote" style="display:inline-flex;align-items:center;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:16px 24px;border:2px solid var(--color-accent);">Kérem az ajánlatot</a>
+<a class="interaction-6" href="tel:+36203483026" style="display:inline-flex;align-items:center;background:transparent;color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:16px 24px;border:2px solid #4c5139;color:#3f4530;">Inkább hívok</a>
+</div>
+</div>
+</section>
+<section id="sos" style="background:#4c3a2b;color:#f7eddd;border-bottom:2px solid #33291f;">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:rgba(245,236,224,.22);letter-spacing:-0.04em;">05</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400);">SOS SZOLGÁLTATÁS</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 18px;">Sürgős esetben</h2>
+<p class="rv" style="margin:0 0 44px;color:#d9d0c4;font-size:16.5px;line-height:1.65;max-width:64ch;">Ha a probléma nem várhat a következő szabad időpontig, két sürgősségi szolgáltatás közül választhat. A kiszállás időpontját telefonos egyeztetéskor tudjuk pontosan megmondani.</p>
+<div class="split" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:rgba(245,236,224,.28);">
+<div class="rv" style="background:#422f22;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(34px,4.5vw,54px);line-height:1;letter-spacing:-0.03em;color:var(--color-accent);margin:0 0 14px;">70 000 Ft</p>
+<h3 style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:21px;margin:0 0 12px;letter-spacing:-0.015em;">SOS kiszállás</h3>
+<p style="margin:0 0 26px;color:#d9d0c4;font-size:15px;line-height:1.65;">Soron kívüli, sürgősségi kiszállás, amikor a probléma gyors beavatkozást igényel és nem fér bele a szokásos beosztásba.</p>
+<a class="interaction-4" data-conversion-action="phone" href="tel:+36203483026" id="sos-call" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:15px 22px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+            SOS segítséget kérek
+          </a>
+</div>
+<div class="rv" style="background:#422f22;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;">
+<p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(34px,4.5vw,54px);line-height:1;letter-spacing:-0.03em;color:var(--color-accent);margin:0 0 14px;">75 000 Ft</p>
+<h3 style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:21px;margin:0 0 12px;letter-spacing:-0.015em;">SOS besurranó patkányirtás</h3>
+<p style="margin:0 0 26px;color:#d9d0c4;font-size:15px;line-height:1.65;">Amikor egy-egy patkány váratlanul, egyedileg jut be egy ingatlanba — például kertben tartott baromfi közelébe, társasházi pincébe, lépcsőházba, vagy bármely más helyszínre —, gyors és célzott beavatkozásra van szükség.</p>
+<a class="interaction-4" href="tel:+36203483026" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:15px 22px;border:2px solid var(--color-accent);">
+<svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+            SOS segítséget kérek
+          </a>
+</div>
+</div>
+<p style="margin:26px 0 0;color:#b5aa9c;font-size:13.5px;line-height:1.6;max-width:64ch;">A pontos kiérkezési időt minden esetben telefonos egyeztetéskor mondjuk meg — ez a helyszíntől és az aktuális leterheltségtől függ.</p>
+</div>
+</section>
+<section id="tarsashaz" style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-300);letter-spacing:-0.04em;">06</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">TÁRSASHÁZ ÉS ÜZLETI ÜGYFELEK</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 44px;max-width:24ch;">Társasházak, vendéglátóhelyek és üzleti ingatlanok</h2>
+<div class="split" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:start;">
+<div class="rv">
+<p style="margin:0 0 22px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.65;max-width:56ch;">Rendszeresen dolgozunk üzleti és közösségi ingatlanokkal, ahol a patkány- vagy egérprobléma több lakót, munkatársat vagy vendéget is érint.</p>
+<ul style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none;">
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Társasház</li>
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Vendéglátóhely</li>
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Üzlet</li>
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Iroda</li>
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Raktár</li>
+<li style="border:2px solid var(--color-text);padding:8px 14px;font-family:var(--font-heading);font-weight:800;font-size:13px;letter-spacing:.02em;">Egyéb üzleti ingatlan</li>
+</ul>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:56ch;">A társasházi munkák terjedelme ingatlanonként jelentősen eltér — a lépcsőházak, pincék és udvarok száma és állapota alapján mindig egyedi felmérést és ajánlatot adunk.</p>
+</div>
+<div class="rv" style="border-top:2px solid var(--color-text);">
+<div style="padding:26px 0;border-bottom:1px solid var(--color-divider);">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:21px;margin:0 0 10px;letter-spacing:-0.015em;">Társasház</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;"><strong style="font-family:var(--font-heading);font-weight:800;color:var(--color-accent-700);font-size:17px;">50 000–60 000 Ft-tól</strong>, irányár — a végleges díjat a helyszín (épületek száma, pincék, udvar) alapján határozzuk meg.</p>
+</div>
+<div style="padding:26px 0;border-bottom:2px solid var(--color-text);">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:21px;margin:0 0 10px;letter-spacing:-0.015em;">HACCP-s vendéglátóhely, üzlet</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;">Egyedi ajánlat — keressen bizalommal. A kártevőmentesítés ütemezését és dokumentációját a helyszín és az Önök folyamatai alapján egyeztetjük.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="garancia" style="background:#eceee2;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-400);letter-spacing:-0.04em;">07</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">GARANCIA</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 44px;max-width:22ch;">Amit a garanciáról tudni érdemes</h2>
+<div class="split" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:start;">
+<div class="rv" style="border-left:4px solid var(--color-accent);padding:4px 0 4px 22px;">
+<p style="margin:0 0 16px;color:var(--color-neutral-800);font-size:16.5px;line-height:1.7;">A garancia lehetősége és a pontos feltételei nem egységesek — ezeket a fertőzöttség mértéke, a helyszíni és műszaki adottságok, valamint az elvégzett munka jellege határozza meg.</p>
+<p style="margin:0;color:var(--color-neutral-800);font-size:16.5px;line-height:1.7;">A konkrét feltételeket a helyszíni felmérés vagy a munka elvégzése után, az adott ingatlan és probléma ismeretében adjuk meg, írásban is.</p>
+</div>
+<div class="rv assure" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:2px solid var(--color-text);">
+<div data-n="01" style="padding:22px 20px 22px 0;border-bottom:1px solid var(--color-divider);border-right:1px solid var(--color-divider);">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.012em;">Utóellenőrzés</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">A garanciális feltételektől függően visszatérünk, hogy ellenőrizzük az eredményt.</p>
+</div>
+<div data-n="02" style="padding:22px 0 22px 20px;border-bottom:1px solid var(--color-divider);">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.012em;">Számlaképesség</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Minden elvégzett munkáról hivatalos számlát állítunk ki.</p>
+</div>
+<div data-n="03" style="padding:22px 20px 22px 0;border-right:1px solid var(--color-divider);">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.012em;">Engedélyezett szerek</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Kizárólag professzionális, jogszerűen forgalmazott készítményeket használunk.</p>
+</div>
+<div data-n="04" style="padding:22px 0 22px 20px;">
+<h3 style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0 0 6px;letter-spacing:-0.012em;">Diszkréció</h3>
+<p style="margin:0;color:var(--color-neutral-700);font-size:14.5px;line-height:1.6;">Kérésre jelöletlen megjelenéssel, visszafogott kommunikációval dolgozunk.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div class="rv split" style="max-width:1280px;margin:0 auto;padding:clamp(32px,4vw,52px) clamp(18px,4vw,40px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;">
+<div>
+<h2 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(22px,2.4vw,30px);line-height:1.1;letter-spacing:-0.018em;margin:0 0 8px;">Egyéb kártevő okoz problémát?</h2>
+<p style="margin:0;color:var(--color-neutral-700);font-size:15.5px;line-height:1.6;max-width:56ch;">Ha nem patkányról vagy egérről van szó, írja meg az ajánlatkérő űrlapon, milyen kártevővel találkozott — visszajelzünk, tudunk-e segíteni.</p>
+</div>
+<a class="interaction-6" data-conversion-action="quote" href="#ajanlat" style="display:inline-flex;align-items:center;justify-content:flex-start;background:transparent;color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:15px;padding:16px 24px;border:2px solid #4c5139;color:#3f4530;white-space:nowrap;">Kérjen ajánlatot</a>
+</div>
+</section>
+<section id="gyik" style="background:#f5ebdc;border-bottom:2px solid var(--color-divider);">
+<div style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);">
+<div class="rv" style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-400);letter-spacing:-0.04em;">08</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">GYIK</span>
+</div>
+<h2 class="rv" style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 40px;">Gyakori kérdések</h2>
+<div class="rv" style="max-width:900px;border-top:2px solid var(--color-text);">
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Mennyibe kerül a patkányirtás?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Az alapár 39 000 Ft-tól indul, ez 3 db irtószeres etetőláda kihelyezését tartalmazza. A végleges ár a helyszín adottságaitól, méretétől és a fertőzöttség mértékétől függ.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Mit tartalmaz a 39 000 Ft-tól induló ár?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">3 db zárt, jelölt irtószeres etetőláda kihelyezését és feltöltését. Nagyobb terület vagy erősebb fertőzöttség esetén ennél több ládára és munkára lehet szükség — ezt a felmérés után pontosan megmondjuk.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Mennyi a helyszíni felmérés díja?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Budapesten 15 000 Ft, Pest megyében 25 000 Ft-tól — itt a díj a kiszállási távolságtól is függ.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Pest megyében is dolgoznak?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Igen, Budapest mellett Pest megyében is vállalunk munkát.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Van SOS patkányirtás?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Igen. SOS kiszállás 70 000 Ft, SOS besurranó patkányirtás — például kertben tartott baromfi közelébe vagy társasházba váratlanul bejutott, egyedi patkány esetén — 75 000 Ft.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Mitől függ a garancia?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">A fertőzöttség mértékétől, a helyszíni adottságoktól és az elvégzett munka jellegétől — a pontos feltételeket a helyszín ismeretében adjuk meg.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Vállalnak társasházat?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Igen, társasházi megbízásoknál az irányár 50 000–60 000 Ft-tól indul, a pontos díjat a helyszín alapján adjuk meg.</p>
+</details>
+<details style="border-bottom:1px solid var(--color-divider);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Van egérirtás?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Igen, lakóingatlanban, társasházban és üzleti ingatlanban egyaránt, 34 000 Ft-tól induló árral. A végleges díjat a helyszíni felmérés alapján adjuk meg.</p>
+</details>
+<details style="border-bottom:2px solid var(--color-text);">
+<summary style="cursor:pointer;list-style:none;padding:20px 0;font-family:var(--font-heading);font-weight:800;font-size:17px;letter-spacing:-0.012em;display:flex;align-items:center;justify-content:space-between;gap:20px;">Hogyan kérhetek ajánlatot?<span aria-hidden="true" class="faq-toggle-icon" style="flex-shrink:0;color:var(--color-accent);font-size:22px;line-height:1;">+</span></summary>
+<p style="margin:0;padding:0 0 22px;color:var(--color-neutral-700);font-size:15.5px;line-height:1.65;max-width:70ch;">Hívjon minket telefonon, vagy töltse ki az alábbi ajánlatkérő űrlapot — rövid időn belül visszahívjuk.</p>
+</details>
+</div>
+</div>
+</section>
+<section id="ajanlat" style="background:#fdf8f0;border-bottom:2px solid var(--color-divider);">
+<div class="split" style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,40px);display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(32px,4vw,64px);align-items:start;">
+<div class="rv">
+<div style="display:flex;align-items:baseline;gap:18px;margin-bottom:14px;">
+<span style="font-family:var(--font-heading);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.8;color:var(--color-neutral-300);letter-spacing:-0.04em;">09</span>
+<span style="font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700);">AJÁNLATKÉRÉS</span>
+</div>
+<h2 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3.8vw,48px);line-height:1.04;letter-spacing:-0.025em;margin:0 0 16px;">Kérjen ajánlatot</h2>
+<p style="margin:0 0 28px;color:var(--color-neutral-700);font-size:16.5px;line-height:1.65;max-width:46ch;">Töltse ki az űrlapot, és rövid időn belül visszahívjuk — vagy hívjon minket most, ha sürgős.</p>
+<div style="background:#3f4530;color:#f2f0e2;padding:28px;">
+<p style="margin:0 0 8px;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-400);">Vagy hívjon most</p>
+<a class="interaction-7" href="tel:+36203483026" style="display:inline-block;font-family:var(--font-heading);font-weight:800;font-size:clamp(26px,3vw,36px);letter-spacing:-0.025em;color:#fdf9f3;text-decoration:none;margin-bottom:10px;">+36 20 348 3026</a>
+<p style="margin:0;font-size:13.5px;color:#cfc6b9;">Nyitvatartás: H–P 8:00–18:00</p>
+</div>
+</div>
+<form action="/send-form.php" class="rv quote-form" method="post" novalidate="" style="background:#fffdf8;border:2px solid #4c5139;padding:clamp(22px,3vw,40px);">
+<div class="form-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;">
+<div style="display:flex;flex-direction:column;gap:7px;">
+<label for="f-nev" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Név <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+<input aria-describedby="f-nev-error" autocomplete="name" class="interaction-8" id="f-nev" name="nev" required="" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);min-height:50px;" type="text"/>
+<span data-error-for="f-nev" id="f-nev-error" style="color:var(--color-accent-700);font-size:12.5px;font-weight:600;min-height:1.1em;"></span>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px;">
+<label for="f-telefon" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Telefonszám <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+<input aria-describedby="f-telefon-error" autocomplete="tel" class="interaction-8" id="f-telefon" name="telefon" required="" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);min-height:50px;" type="tel"/>
+<span data-error-for="f-telefon" id="f-telefon-error" style="color:var(--color-accent-700);font-size:12.5px;font-weight:600;min-height:1.1em;"></span>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px;">
+<label for="f-email" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">E-mail</label>
+<input aria-describedby="f-email-error" autocomplete="email" class="interaction-8" id="f-email" name="email" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);min-height:50px;" type="email"/>
+<span data-error-for="f-email" id="f-email-error" style="color:var(--color-accent-700);font-size:12.5px;font-weight:600;min-height:1.1em;"></span>
+</div>
+<div style="display:flex;flex-direction:column;gap:7px;">
+<label for="f-telepules" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Település / kerület <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+<input aria-describedby="f-telepules-error" autocomplete="address-level2" class="interaction-8" id="f-telepules" name="telepules" required="" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);min-height:50px;" type="text"/>
+<span data-error-for="f-telepules" id="f-telepules-error" style="color:var(--color-accent-700);font-size:12.5px;font-weight:600;min-height:1.1em;"></span>
+</div>
+<div style="grid-column:1/-1;display:flex;flex-direction:column;gap:7px;">
+<label for="f-szolgaltatas" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Szolgáltatás típusa</label>
+<select class="interaction-8" id="f-szolgaltatas" name="szolgaltatas" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);min-height:50px;border-radius:0;">
+<option value="patkanyirtas">Patkányirtás</option>
+<option value="egerirtas">Egérirtás</option>
+<option value="sos">SOS patkányirtás</option>
+<option value="kutyas_gorenyes">Kutyás / görényes</option>
+<option value="tarsashaz_uzleti">Társasház / üzleti</option>
+<option value="egyeb">Egyéb</option>
+</select>
+</div>
+<div style="grid-column:1/-1;display:flex;flex-direction:column;gap:7px;">
+<label for="f-uzenet" style="font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;">Üzenet</label>
+<textarea class="interaction-8" id="f-uzenet" name="uzenet" rows="4" style="font:inherit;font-size:15px;padding:14px 14px;border:2px solid var(--color-neutral-400);background:#fbf5ea;color:var(--color-text);resize:vertical;"></textarea>
+</div>
+<div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+<label for="f-website">Weboldal</label>
+<input autocomplete="off" id="f-website" name="website" tabindex="-1" type="text"/>
+</div>
+<input id="f-loaded-at" name="form_loaded_at" type="hidden" value=""/>
+<div style="grid-column:1/-1;display:flex;flex-direction:row;align-items:flex-start;gap:12px;flex-wrap:wrap;border-top:1px solid var(--color-divider);padding-top:18px;">
+<input aria-describedby="f-adatkezeles-error" id="f-adatkezeles" name="adatkezeles" required="" style="margin-top:3px;flex-shrink:0;width:20px;height:20px;accent-color:var(--color-accent);" type="checkbox"/>
+<label for="f-adatkezeles" style="font-weight:400;font-size:14px;line-height:1.5;color:var(--color-neutral-800);flex:1;min-width:200px;">Elolvastam és elfogadom az <a href="adatkezeles.html" rel="noopener" style="color:var(--color-accent-700);font-weight:700;text-decoration:underline;" target="_blank">adatkezelési tájékoztatót</a>. <span aria-hidden="true" style="color:var(--color-accent);">*</span></label>
+<span data-error-for="f-adatkezeles" id="f-adatkezeles-error" style="color:var(--color-accent-700);font-size:12.5px;font-weight:600;width:100%;"></span>
+</div>
+<div style="grid-column:1/-1;">
+<button class="interaction-3" data-conversion-action="quote" id="form-submit" style="width:100%;display:inline-flex;align-items:center;justify-content:flex-start;background:var(--color-accent);color:#fdf9f3;border:2px solid var(--color-accent);cursor:pointer;font-family:var(--font-heading);font-weight:800;font-size:16px;letter-spacing:.02em;padding:18px 24px;min-height:56px;" type="submit">Ajánlatot kérek</button>
+<p aria-live="polite" id="formStatus" role="status" style="font-size:14px;font-weight:700;min-height:1.2em;margin:14px 0 0;"></p>
+</div>
+</div>
+</form>
+</div>
+</section>
+<section style="background:var(--color-accent);color:#fdf9f3;">
+<div class="rv" style="max-width:1280px;margin:0 auto;padding:clamp(52px,7vw,92px) clamp(18px,4vw,40px);">
+<h2 style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:clamp(32px,5vw,68px);line-height:1;letter-spacing:-0.03em;margin:0 0 20px;max-width:16ch;">Ne várjon, amíg elszaporodnak</h2>
+<p style="margin:0 0 32px;color:#fdf3ef;font-size:17px;line-height:1.6;max-width:56ch;">Hívjon most, vagy kérjen ajánlatot — Budapesten és Pest megyében is rövid időn belül tudunk időpontot egyeztetni.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a class="interaction-9" href="tel:+36203483026" style="display:inline-flex;align-items:center;gap:10px;background:#fdf9f3;color:var(--color-accent-700);text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:16px;padding:18px 26px;border:2px solid #fff;">
+<svg aria-hidden="true" height="18" viewbox="0 0 24 24" width="18"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+          Hívom most: +36 20 348 3026
+        </a>
+<a class="interaction-10" href="#ajanlat" style="display:inline-flex;align-items:center;background:transparent;color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:16px;padding:18px 26px;border:2px solid rgba(255,255,255,.6);">Ajánlatot kérek</a>
+</div>
+</div>
+</section>
+</main>
+<footer id="kapcsolat" style="background:#33291f;color:#d6c9b3;">
+<div class="split" style="max-width:1280px;margin:0 auto;padding:clamp(44px,6vw,72px) clamp(18px,4vw,40px) 32px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;">
+<div>
+<p style="font-family:var(--font-heading);font-weight:800;color:#fdf9f3;font-size:19px;letter-spacing:-0.015em;margin:0 0 12px;">A-Leco Management Kft.</p>
+<p style="margin:0;font-size:14px;line-height:1.6;">Patkányirtás és egérirtás Budapest és Pest megye területén.</p>
+</div>
+<div>
+<h3 style="color:#fdf9f3;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;">Elérhetőség</h3>
+<p style="margin:0 0 6px;font-size:14px;overflow-wrap:anywhere;"><a class="interaction-7" data-conversion-action="phone" href="tel:+36203483026" id="footer-call" style="color:#f5ece0;text-decoration:none;">+36 20 348 3026</a></p>
+<p style="margin:0 0 6px;font-size:14px;overflow-wrap:anywhere;"><a class="interaction-7" href="mailto:sevenautoszer@gmail.com" style="color:#f5ece0;text-decoration:none;">sevenautoszer@gmail.com</a></p>
+<p style="margin:0;font-size:14px;">Budapest, Kámfor u. 28., 1131</p>
+</div>
+<div>
+<h3 style="color:#fdf9f3;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;">Cégadatok</h3>
+<p style="margin:0 0 6px;font-size:14px;">A-Leco Management Kft.</p>
+<p style="margin:0 0 6px;font-size:14px;">Adószám: 24676524-1-42</p>
+<p style="margin:0;font-size:14px;">Nyitvatartás: H–P 8:00–18:00</p>
+</div>
+<div>
+<h3 style="color:#fdf9f3;font-family:var(--font-heading);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;">Oldal</h3>
+<p style="margin:0 0 6px;font-size:14px;"><a class="interaction-11" href="#patkanyirtas" style="color:#cfc6b9;text-decoration:none;">Patkányirtás</a></p>
+<p style="margin:0 0 6px;font-size:14px;"><a class="interaction-11" href="#egerirtas" style="color:#cfc6b9;text-decoration:none;">Egérirtás</a></p>
+<p style="margin:0 0 6px;font-size:14px;"><a class="interaction-11" href="#arak" style="color:#cfc6b9;text-decoration:none;">Árak</a></p>
+<p style="margin:0 0 6px;font-size:14px;"><a class="interaction-11" href="adatkezeles.html" style="color:#cfc6b9;text-decoration:none;">Adatkezelési tájékoztató</a></p>
+<p style="margin:0 0 6px;font-size:14px;"><a class="interaction-11" href="cookie-tajekoztato.html" style="color:#cfc6b9;text-decoration:none;">Cookie tájékoztató</a></p>
+<p style="margin:0;font-size:14px;"><button class="interaction-11" data-cookie-open-settings="" style="background:none;border:none;padding:0;margin:0;font:inherit;color:#cfc6b9;cursor:pointer;text-align:left;" type="button">Cookie beállítások</button></p>
+</div>
+</div>
+<div style="max-width:1280px;margin:0 auto;padding:20px clamp(18px,4vw,40px) 28px;border-top:1px solid rgba(245,236,224,.18);">
+<p style="margin:0;font-size:12.5px;">© <span id="year"></span> A-Leco Management Kft. Minden jog fenntartva.</p>
+</div>
+</footer>
+<div aria-hidden="true" class="mobile-bar bottom-spacer" style="height:70px;background:#33291f;"></div>
+<div aria-label="Gyors elérhetőség" class="mobile-bar" style="position:fixed;left:0;right:0;bottom:0;z-index:400;display:flex;gap:2px;background:#33291f;border-top:2px solid #33291f;padding-bottom:env(safe-area-inset-bottom);">
+<a data-conversion-action="phone" href="tel:+36203483026" id="mobile-call" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#3f4530;color:#f7eddd;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:14.5px;letter-spacing:.04em;text-transform:uppercase;padding:17px 10px;min-height:56px;">
+<svg aria-hidden="true" height="16" viewbox="0 0 24 24" width="16"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z" fill="currentColor"></path></svg>
+    Hívás
+  </a>
+<a data-conversion-action="quote" href="#ajanlat" id="mobile-quote" style="flex:1;display:inline-flex;align-items:center;justify-content:center;background:var(--color-accent);color:#fdf9f3;text-decoration:none;font-family:var(--font-heading);font-weight:800;font-size:14.5px;letter-spacing:.04em;text-transform:uppercase;padding:17px 10px;min-height:56px;">Ajánlatkérés</a>
+</div>
+</div>
 <!-- ===== COOKIE HOZZÁJÁRULÁS ===== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerText" hidden>
   <div class="cookie-banner__text">
@@ -854,6 +803,6 @@
 </div>
 
 <script src="js/cookie-consent.js" defer></script>
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=20260911" defer></script>
 </body>
 </html>

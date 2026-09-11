@@ -4,7 +4,8 @@
    ajánlatkérő űrlap validáció és beküldés.
    ============================================================ */
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 /* --- Mobilmenü --- */
 (function mobileMenu() {
@@ -12,22 +13,36 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const nav = document.getElementById('main-nav');
   if (!toggle || !nav) return;
 
+  function closeMenu(returnFocus = false) {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Menü megnyitása');
+    if (returnFocus) toggle.focus();
+  }
+
   toggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Menü bezárása' : 'Menü megnyitása');
   });
 
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', () => closeMenu());
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) closeMenu(true);
+  });
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+  window.matchMedia('(min-width: 961px)').addEventListener('change', (event) => {
+    if (event.matches) closeMenu();
   });
 })();
 
 /* --- Reveal animáció (IntersectionObserver, staggerelt késleltetéssel) --- */
 (function revealOnScroll() {
-  const items = document.querySelectorAll('.reveal');
+  const items = document.querySelectorAll('.reveal, .rv');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -63,7 +78,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
       e.preventDefault();
       const offset = (header ? header.offsetHeight : 0) + 12;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
       history.pushState(null, '', id);
     });
   });
@@ -123,11 +139,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
     status.removeAttribute('data-state');
     status.textContent = '';
 
-    const requiredFields = form.querySelectorAll('[required]');
+    const validatedFields = form.querySelectorAll('input:not([type="hidden"]):not([name="website"]), textarea, select');
     let firstInvalid = null;
     let allValid = true;
 
-    requiredFields.forEach((field) => {
+    validatedFields.forEach((field) => {
       const valid = validateField(field);
       if (!valid) {
         allValid = false;
@@ -153,14 +169,26 @@ document.getElementById('year').textContent = new Date().getFullYear();
     })
       .then((res) => {
         if (res.redirected) {
-          window.location.href = res.url;
-          return null;
+          const destination = new URL(res.url, window.location.href);
+          if (res.ok && destination.origin === window.location.origin && destination.pathname === '/koszonjuk.html') {
+            window.location.href = destination.href;
+            return null;
+          }
+          throw new Error('Unexpected form redirect');
         }
-        return res.json().catch(() => ({ ok: res.ok }));
+        // A static host can return HTML or PHP source with HTTP 200. Only the
+        // existing PHP endpoint's explicit JSON success confirms submission.
+        if (!(res.headers.get('content-type') || '').includes('application/json')) {
+          throw new Error('Expected JSON from the form endpoint');
+        }
+        return res.json().then((data) => {
+          if (!res.ok && data && data.ok) throw new Error('Form request failed');
+          return data;
+        });
       })
       .then((data) => {
         if (data === null) return;
-        if (data && data.ok) {
+        if (data && data.ok === true) {
           window.location.href = 'koszonjuk.html';
           return;
         }
