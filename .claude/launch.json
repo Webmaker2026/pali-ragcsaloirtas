@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:/Users/lakas/AppData/Local/Temp/claude/C--Users-lakas-Desktop-pali-ragcsaloirtas--claude-worktrees-page-modifications-a9e246/d064c1c7-99e8-44de-af46-c60643698689/scratchpad/server.js",
+        ".",
+        "4173"
+      ],
+      "port": 4173
+    }
+  ]
+}
