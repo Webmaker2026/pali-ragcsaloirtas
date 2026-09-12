@@ -195,3 +195,21 @@ document.getElementById('year').textContent = new Date().getFullYear();
     media.addListener(apply);
   }
 })();
+
+/* --- Mobil hero: pontok elrejtése, hogy az ajánlatkérő gomb után rögtön a kép jöjjön --- */
+(function mobileHeroPoints() {
+  const points = document.querySelector('.hero__points');
+  if (!points) return;
+
+  const media = window.matchMedia('(max-width: 767px)');
+  const apply = () => {
+    points.style.display = media.matches ? 'none' : '';
+  };
+
+  apply();
+  if (typeof media.addEventListener === 'function') {
+    media.addEventListener('change', apply);
+  } else if (typeof media.addListener === 'function') {
+    media.addListener(apply);
+  }
+})();
