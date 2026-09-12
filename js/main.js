@@ -175,3 +175,23 @@ document.getElementById('year').textContent = new Date().getFullYear();
       });
   });
 })();
+
+/* --- Mobil bizalmi sáv: csak az első elem marad látható --- */
+(function mobileTrustStrip() {
+  const items = Array.from(document.querySelectorAll('.trust__item'));
+  if (!items.length) return;
+
+  const media = window.matchMedia('(max-width: 767px)');
+  const apply = () => {
+    items.forEach((item, index) => {
+      item.style.display = media.matches && index > 0 ? 'none' : '';
+    });
+  };
+
+  apply();
+  if (typeof media.addEventListener === 'function') {
+    media.addEventListener('change', apply);
+  } else if (typeof media.addListener === 'function') {
+    media.addListener(apply);
+  }
+})();
